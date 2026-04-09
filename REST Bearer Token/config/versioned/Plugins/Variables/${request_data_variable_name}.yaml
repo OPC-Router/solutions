@@ -1,0 +1,4 @@
+Id: a571802a-7a51-47f3-bfbf-22cc5d8fba3e
+Name: ${request_data_variable_name}
+_clrType:
+- inray.OPCRouter.VariablesPlugIn.Config.Variable, inray.OPCRouter4.VariablesPlugIn

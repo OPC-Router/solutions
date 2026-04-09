@@ -1,0 +1,85 @@
+FormatVersion: 1
+Tags:
+  - REST
+IconFile: "rest-bearer-token.svg"
+DisplayName:
+  DE: "REST Bearer Token"
+  EN: "REST Bearer Token"
+ShortDescription:
+  DE: "REST Authentifizierung mit Bearer Token"
+  EN: "REST authentication with Bearer Token"
+Parameters:
+  bearer_rest_client_instance_name:
+    Type: "FileName"
+    Label:
+      DE: "Bearer REST Client Name"
+      EN: "Bearer REST Client name"
+    HelpText:
+      DE: "Eindeutiger Name für die Bearer REST Client Instanz"
+      EN: "Unique name for the Bearer REST Client instance"
+    Default: "Bearer REST Client"
+  rest_client_host:
+    Type: "String"
+    Label:
+      DE: "REST Host-URL"
+      EN: "REST host URL"
+  get_bearer_token_connection_name:
+    Type: "FileName"
+    Label:
+      DE: "Bearer Token Verbindungsname"
+      EN: "Bearer token connection name"
+    HelpText:
+      DE: "Name der Verbindung zum Abrufen des Bearer Tokens"
+      EN: "Name of the connection used to retrieve the Bearer token"
+    Default: "Get Bearer Token"
+  rest_bearer_to_url:
+    Type: "String"
+    Label:
+      DE: "Bearer Endpunkt"
+      EN: "Bearer endpoint"
+    HelpText:
+      DE: "Relativer Pfad zum API Endpunkt für das Anfordern des Bearer Tokens. Als Basis des Pfades dient die REST Host-URL"
+      EN: "Relative path to the API endpoint for requesting the Bearer Token. The REST host URL serves as the basis for the path"
+  bearer_token_json_expression:
+    Type: "String"
+    Label:
+      DE: "Bearer Token JSON Expression"
+      EN: "Bearer Token JSON Expression"
+    HelpText:
+      DE: 'JSON Expression, um den Bearer Token aus der Antwort zu erhalten. Zum Beispiel "Data.Token"'
+      EN: 'JSON Expression used to extract the Bearer Token from the response. For example "Data.Token"'
+  request_with_bearer_token_connection_name:
+    Type: "FileName"
+    Label:
+      DE: "Datenanfrage Verbindungsname"
+      EN: "Data request connection name"
+    HelpText:
+      DE: "Name der Verbindung für die Anfrage mit Bearer Token"
+      EN: "Name of the connection used for the request with Bearer Token"
+    Default: "Make REST request with Bearer Token"
+  rest_data_request_to_url:
+    Type: "String"
+    Label:
+      DE: "Datenanfrage URL"
+      EN: "Data request URL"
+    HelpText:
+      DE: "Pfad zu einem API Endpunkt, der Bearer Token Authentifikation benötigt"
+      EN: "Path to an API endpoint that requires Bearer Token authentication"
+  bearer_token_variable_name:
+    Type: "FileName"
+    Label:
+      DE: "Bearer Token Variablenname"
+      EN: "Bearer Token variable name"
+    HelpText:
+      DE: "Name der Variablen, in der der Bearer Token gespeichert wird"
+      EN: "Name of the variable that stores the Bearer Token"
+    Default: "Bearer Token"
+  request_data_variable_name:
+    Type: "FileName"
+    Label:
+      DE: "Daten Variablenname"
+      EN: "Data variable name"
+    HelpText:
+      DE: "Name der Variablen, in der die angeforderten Daten gespeichert werden"
+      EN: "Name of the variable that stores the requested data"
+    Default: "Request data"

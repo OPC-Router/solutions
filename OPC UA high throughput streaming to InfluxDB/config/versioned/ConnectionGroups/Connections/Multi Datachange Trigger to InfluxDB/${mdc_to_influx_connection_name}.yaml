@@ -1,0 +1,113 @@
+ChangedUtcTimestamp: 2025-11-18T13:09:27.2491730Z
+ConnectionLines:
+- ItemStart: 1301505565
+  ItemStop: 275283891
+- ItemStart: 1610281653
+  ItemStop: 2010304498
+- ItemStart: 35686559
+  ItemStop: 2046053429
+PublishedUtcTimestamp: 0001-01-01T00:00:00.0000000Z
+SavedInVersion: 5.6.5000.0
+TransferObjects:
+- ChangedUTCTimestamp: 2025-11-12T14:18:35.2560000Z
+  GridSnapPixel: 17
+  Groups:
+  - GroupType: 100110
+    Items:
+    - Direction: input
+      ItemType: Tag
+      LocalId: 2010304498
+      Name: Item path
+      _clrType:
+      - inray.OPCRouter.Influx2PlugIn.Config.Influx2TransferObjectItem, inray.OPCRouter4.Influx2PlugIn
+    Name: Tags
+    _clrType:
+    - inray.OPCRouter.Influx2PlugIn.Config.Influx2TagsGroup, inray.OPCRouter4.Influx2PlugIn
+  - GroupType: 100111
+    Items:
+    - Direction: input
+      LocalId: 275283891
+      Name: Value
+      _clrType:
+      - inray.OPCRouter.Influx2PlugIn.Config.Influx2TransferObjectItem, inray.OPCRouter4.Influx2PlugIn
+    Name: Felder
+    _clrType:
+    - inray.OPCRouter.Influx2PlugIn.Config.Influx2FieldsGroup, inray.OPCRouter4.Influx2PlugIn
+  - GroupType: 100112
+    Items:
+    - Direction: input
+      ItemType: Timestamp
+      LocalId: 2046053429
+      Name: Timestamp
+      _clrType:
+      - inray.OPCRouter.Influx2PlugIn.Config.Influx2TransferObjectItem, inray.OPCRouter4.Influx2PlugIn
+    Name: Allgemein
+    _clrType:
+    - inray.OPCRouter.Influx2PlugIn.Config.Influx2GeneralGroup, inray.OPCRouter4.Influx2PlugIn
+  LocalId: 941766907
+  Measurement: "${measurement}"
+  PlugIn: 2511121418-416619323-58016C87-0000F535
+  PosX: 460
+  PosY: 20
+  TimestampMode: Input
+  _clrType:
+  - inray.OPCRouter.Influx2PlugIn.Config.Influx2TransferObjectConfig, inray.OPCRouter4.Influx2PlugIn
+- ChangedUTCTimestamp: 2025-11-18T12:52:08.7840000Z
+  EnableCyclicBrowseWorker: ${refresh_mdc_items}
+  GridSnapPixel: 3
+  Groups:
+  - Items:
+    - Direction: output
+      LocalId: 1301505565
+      Name: Value
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: QualityInt
+      LocalId: 1224040598
+      Name: Quality ID
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: QualityString
+      LocalId: 568835949
+      Name: Quality string
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: Timestamp
+      LocalId: 35686559
+      Name: Value Time
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: ItemName
+      LocalId: 960737201
+      Name: Node ID
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: ItemNamespaceName
+      LocalId: 1466025749
+      Name: Item namespace
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: ItemDisplayName
+      LocalId: 1280074746
+      Name: Item name
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: ItemPath
+      LocalId: 1610281653
+      Name: Item path
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+  LocalId: 361587840
+  OPCAddress: "${mdc_trigger_path}"
+  PlugIn: 2511121416-513116611-58016C87-00008789
+  PosX: 20
+  PosY: 20
+  _clrType:
+  - inray.OPCRouter.OPCPlugIn.Config.MultiDatachangeTrigger.MultiDatachangeTriggerConfig, inray.OPCRouter4.OPCPlugIn

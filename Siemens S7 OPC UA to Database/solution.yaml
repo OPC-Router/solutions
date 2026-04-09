@@ -1,0 +1,77 @@
+FormatVersion: 1
+Tags:
+  - OPC
+  - DB
+IconFile: "S7-to-database.svg"
+DisplayName:
+  DE: "Siemens S7 OPC UA zu Datenbank"
+  EN: "Siemens S7 OPC UA to database"
+ShortDescription:
+  DE: "Datenübertragung von einer Siemens S7 Steuerung zu einer Datenbank"
+  EN: "Data transfer from a Siemens S7 PLC to a database"
+Parameters:
+  siemens_s7_instance_name:
+    Type: "FileName"
+    Label:
+      DE: "Siemens S7 OPC UA Client Name"
+      EN: "Siemens S7 OPC UA Client name"
+    HelpText:
+      DE: "Eindeutiger Name für die Siemens S7 Instanz"
+      EN: "Unique name for the Siemens S7 instance"
+    Default: "Siemens S7"
+  siemens_s7_mssql_instance_name:
+    Type: "FileName"
+    Label:
+      DE: "Microsoft SQL Plug-in Name"
+      EN: "Microsoft SQL Plug-in name"
+    HelpText:
+      DE: "Eindeutiger Name für die Microsoft SQL Instanz"
+      EN: "Unique name for the Microsoft SQL instance"
+    Default: "Microsoft SQL"
+  opc_client_endpoint:
+    Type: "String"
+    Label:
+      DE: "OPC UA Endpunkt"
+      EN: "OPC UA endpoint"
+    HelpText:
+      DE: "Adresse für die Verbindung zur Siemens S7 Steuerung"
+      EN: "Address for the connection to the Siemens S7 PLC"
+  siemens_s7_to_database_connection_name:
+    Type: "FileName"
+    Label:
+      DE: "Verbindungsname"
+      EN: "Connection name"
+    HelpText:
+      DE: "Name der Verbindung, mit der die Daten in die Datenbank geschrieben werden."
+      EN: "Name of the connection that writes the data to the database."
+    Default: "OPC to Database"
+  MSSQL_Server:
+    Type: "String"
+    Label:
+      DE: "Datenbankserver Hostadresse"
+      EN: "Database server host address"
+    Default: localhost
+  MSSQL_port:
+    Type: "Integer"
+    Label:
+      DE: "Datenbankport"
+      EN: "Database port"
+    Default: 1433
+    Min: 0
+    Max: 65535
+  MSSQL_database:
+    Type: "String"
+    Label:
+      DE: "Datenbank"
+      EN: "Database"
+  MSSQL_username:
+    Type: "String"
+    Label:
+      DE: "Datenbank Benutzername"
+      EN: "Database username"
+    Default: sa
+  MSSQL_password_key:
+    Type: "SecretKey"
+    Label:
+      DE: "Datenbankpasswort"
+      EN: "Database password"

@@ -1,0 +1,12 @@
+BrokerAddress: "${mqtt_broker_address}"
+Changed: 2025-11-18T12:24:09.4671758Z
+ConnectionPoolOptions: {}
+Id: 2511181223-397128238-C201E372-0000754A
+InstanceName: ${multi_datachange_mqtt_instance_name}
+PlugInTypeID: 20000
+Port: ${mqtt_port}
+ProtocolVersion: ${mqtt_protocol_version}
+SavedInVersion: 5.6.5000.0
+SSL: false
+_clrType:
+- inray.OPCRouter.MqttPlugIn.MqttPlugInConfig, inray.OPCRouter4.MqttPlugIn

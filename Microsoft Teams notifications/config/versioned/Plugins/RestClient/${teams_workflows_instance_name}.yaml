@@ -1,0 +1,8 @@
+Changed: 2026-02-16T13:20:48.7600000Z
+HostAddress: ${rest_host_endpoint}
+Id: 2602161320-409778489-5C2DE80B-00012E90
+InstanceName: ${teams_workflows_instance_name}
+PlugInTypeID: 18000
+SavedInVersion: 5.6.5000.0
+_clrType:
+- inray.OPCRouter.RestPlugIn.Client.Config.RestPlugInConfig, inray.OPCRouter4.RestPlugIn

@@ -1,0 +1,21 @@
+AdvancedProperties:
+  BatchedWrite: true
+  IgnoreContinuationPointZero: false
+  KeepAliveTimeoutOverride: 0
+  MaxNodesPerTranslateBrowsePathOverride: 0
+  ParallelSubscriptions: true
+  UseRegisterNodes: false
+AsyncWrite: true
+Changed: 2025-11-18T13:08:20.2992626Z
+DatachangeV2AsyncQueueLimit: 100
+Endpoint: "${opc_client_endpoint}"
+GroupManagerTypeEnum: V2
+Id: 2511121416-513116611-58016C87-00008789
+InstanceName: ${multi_datachange_opc_ua_client_instance_name}
+MultiDataChangeTriggerAsyncBrowse: true
+OpcReadMode: PreferAsync
+PlugInTypeID: 3100
+RegisterItemsOnPlugInStart: true
+SavedInVersion: 5.6.5000.0
+_clrType:
+- inray.OPCRouter.OPCPlugIn.Config.PlugIn.OPCUaPlugInConfig, inray.OPCRouter4.OPCPlugIn

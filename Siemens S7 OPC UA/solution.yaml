@@ -1,0 +1,28 @@
+FormatVersion: 1
+Tags:
+  - OPC
+IconFile: "S7-opc-ua.svg"
+DisplayName:
+  DE: "Siemens S7 OPC UA Anbindung"
+  EN: "Siemens S7 OPC UA connection"
+ShortDescription:
+  DE: "OPC UA Plug-in für die Anbindung einer Siemens S7 Steuerung"
+  EN: "OPC UA plug-in for connecting to a Siemens S7 PLC"
+Parameters:
+  S7_instance_name:
+    Type: "FileName"
+    Label:
+      DE: "S7 OPC UA Client Name"
+      EN: "S7 OPC UA Client name"
+    HelpText:
+      DE: "Eindeutiger Name für die S7 Instanz"
+      EN: "Unique name for the S7 instance"
+    Default: "S7 Client"
+  opc_client_endpoint:
+    Type: "String"
+    Label:
+      DE: "OPC UA Endpunkt"
+      EN: "OPC UA endpoint"
+    HelpText:
+      DE: "Adresse für die Verbindung zur Siemens S7 Steuerung"
+      EN: "Address for the connection to the Siemens S7 PLC"

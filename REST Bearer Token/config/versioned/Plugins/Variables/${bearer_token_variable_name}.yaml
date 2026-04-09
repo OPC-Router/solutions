@@ -1,0 +1,4 @@
+Id: 9500dabc-0a5e-4949-a102-37874f3148bb
+Name: ${bearer_token_variable_name}
+_clrType:
+- inray.OPCRouter.VariablesPlugIn.Config.Variable, inray.OPCRouter4.VariablesPlugIn

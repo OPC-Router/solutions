@@ -1,0 +1,9 @@
+Changed: 2025-11-18T12:00:44.3039336Z
+CookieHandling: None
+HostAddress: "${rest_client_host}"
+Id: 2402021319-350676956-50130D05-00006E59
+InstanceName: ${bearer_rest_client_instance_name}
+PlugInTypeID: 18000
+SavedInVersion: 5.6.5000.0
+_clrType:
+- inray.OPCRouter.RestPlugIn.Client.Config.RestPlugInConfig, inray.OPCRouter4.RestPlugIn

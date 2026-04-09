@@ -1,0 +1,105 @@
+FormatVersion: 1
+Tags:
+  - OPC
+  - MDC
+  - MQTT
+IconFile: "mqtt.svg"
+DisplayName:
+  DE: "OPC UA Streaming zu MQTT"
+  EN: "OPC UA streaming to MQTT"
+ShortDescription:
+  DE: "OPC UA Datenübertragung zu MQTT mit hohem Datendurchsatz"
+  EN: "OPC UA data transfer to MQTT with high data throughput"
+Parameters:
+  multi_datachange_opc_ua_client_instance_name:
+    Type: "FileName"
+    Label:
+      DE: "Multi Datachange OPC UA Client Name"
+      EN: "Multi Datachange OPC UA Client name"
+    HelpText:
+      DE: "Eindeutiger Name für die Multi Datachange OPC UA Client Instanz"
+      EN: "Unique name for the Multi Datachange OPC UA Client instance"
+    Default: "Multi Datachange OPC UA Client"
+  opc_client_endpoint:
+    Type: "String"
+    Label:
+      DE: "OPC UA Endpunkt"
+      EN: "OPC UA endpoint"
+    HelpText:
+      DE: "Adresse für die Verbindung zum OPC UA Server"
+      EN: "Address for the connection to the OPC UA server"
+    Default: "opc.tcp://localhost:49320"
+  multi_datachange_mqtt_instance_name:
+    Type: "FileName"
+    Label:
+      DE: "Multi Datachange MQTT Client Name"
+      EN: "Multi Datachange MQTT Client name"
+    HelpText:
+      DE: "Eindeutiger Name für die Multi Datachange MQTT Instanz"
+      EN: "Unique name for the Multi Datachange MQTT instance"
+    Default: "Multi Datachange MQTT"
+  mqtt_broker_address:
+    Type: "String"
+    Label:
+      DE: "MQTT Broker Hostadresse"
+      EN: "MQTT broker host address"
+  mqtt_port:
+    Type: "Integer"
+    Label:
+      DE: "MQTT Port"
+      EN: "MQTT port"
+    Default: 1883
+    Min: 0
+    Max: 65535
+  mqtt_protocol_version:
+    Type: "Dropdown"
+    Label:
+      DE: "MQTT Version"
+      EN: "MQTT version"
+    Items:
+      - Value: "V_5"
+        DisplayText: "5"
+      - Value: "V3_1"
+        DisplayText: "3.1"
+      - Value: "V3_1_1"
+        DisplayText: "3.1.1"
+    Default: "V3_1_1"
+  mdc_to_mqtt_connection_name:
+    Type: "FileName"
+    Label:
+      DE: "Verbindungsname"
+      EN: "Connection name"
+    HelpText:
+      DE: "Name der Verbindung, die für das Senden von Daten an MQTT verwendet wird"
+      EN: "Name of the connection used for sending data to MQTT"
+    Default: "Multi Datachange Trigger to MQTT"
+  mdc_trigger_path:
+    Type: "String"
+    Label:
+      DE: "Multi Datachange Trigger Pfad"
+      EN: "Multi Datachange Trigger path"
+    HelpText:
+      DE: "Der Pfad, unter dem alle Datenpunkte rekursiv überwacht werden"
+      EN: "The path under which all data points are monitored recursively"
+    Default: "bp=Objects;"
+  mqtt_topic:
+    Type: "String"
+    Label:
+      DE: "MQTT Topic"
+      EN: "MQTT topic"
+    HelpText:
+      DE: "Das MQTT Topic, unter dem die Daten veröffentlicht werden"
+      EN: "The MQTT topic under which the data is published"
+  refresh_mdc_items:
+    Type: "Boolean"
+    Label:
+      DE: "Multi Datachange Trigger Items aktualisieren"
+      EN: "Refresh Multi Datachange Trigger items"
+    HelpText:
+      DE: |-
+        Wenn diese Option aktiv ist, werden zyklisch die überwachten Items aktualisiert.
+        Diese Option sollte nur aktiviert werden, wenn die Datenstruktur nicht statisch ist und sich verändern kann.
+      EN: |-
+        When this option is enabled, the monitored items are updated cyclically.
+        This option should only be enabled if the data structure is not static and may change.
+    Default: false

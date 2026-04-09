@@ -1,0 +1,49 @@
+FormatVersion: 1
+Tags:
+  - Notifications
+  - REST
+IconFile: "slack-notifications.svg"
+DisplayName:
+  DE: "Slack Benachrichtigungen"
+  EN: "Slack notifications"
+ShortDescription:
+  DE: "Senden von Benachrichtigungen an Slack mit REST"
+  EN: "Sending messages to Slack using REST"
+Parameters:
+  slack_api_instance_name:
+    Type: "FileName"
+    Label:
+      DE: "Slack API REST Client Name"
+      EN: "Slack API REST Client name"
+    HelpText:
+      DE: "Eindeutiger Name für die REST Client Instanz"
+      EN: "Unique name for the REST Client instance"
+    Default: "Slack API"
+  rest_host_endpoint:
+    Type: "String"
+    Label:
+      DE: "REST Host-URL"
+      EN: "REST host URL"
+    Default: "https://hooks.slack.com/"
+  rest_to_url_endpoint:
+    Type: "String"
+    Label:
+      DE: "REST URL-Endpunkt"
+      EN: "REST URL endpoint"
+    HelpText:
+      DE: "Endpunkt für den Webhook zum Senden von Nachrichten an Slack"
+      EN: "Endpoint for the webhook which sends messages to Slack"
+  slack_notifications_connection_name:
+    Type: "FileName"
+    Label:
+      DE: "Verbindungsname"
+      EN: "Connection name"
+    HelpText:
+      DE: "Name der Verbindung, die für das Senden von Benachrichtigungen an Slack verwendet wird."
+      EN: "Name of the connection used for sending notifications to Slack."
+    Default: "Send Slack notification"
+  slack_notification_text:
+    Type: "String"
+    Label:
+      DE: "Benachrichtigungsinhalt"
+      EN: "Notification content"

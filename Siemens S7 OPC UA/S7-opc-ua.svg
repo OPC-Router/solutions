@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+  <defs>
+    <clipPath id="clippath">
+      <rect x="1.99" y="39.9" width=".62" height=".62" transform="translate(-27.77 13.41) rotate(-45.02)" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20" data-name="Unbenannter Verlauf 20" x1="-93.96" y1="-635.02" x2="-93.76" y2="-635.02" gradientTransform="translate(-1447.67 1993.08) rotate(45) scale(3.79)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#000"/>
+      <stop offset=".04" stop-color="#000509"/>
+      <stop offset=".28" stop-color="#002541"/>
+      <stop offset=".51" stop-color="#003d6e"/>
+      <stop offset=".71" stop-color="#004f8e"/>
+      <stop offset=".88" stop-color="#005aa1"/>
+      <stop offset="1" stop-color="#005ea8"/>
+    </linearGradient>
+    <clipPath id="clippath-1">
+      <rect x="3.69" y="40.1" width=".62" height=".62" transform="translate(-27.39 14.65) rotate(-44.98)" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20-2" data-name="Unbenannter Verlauf 20" x1="-95.42" y1="-633.89" x2="-95.22" y2="-633.89" gradientTransform="translate(-1438.8 1993.85) rotate(45) scale(3.79)" xlink:href="#Unbenannter_Verlauf_20"/>
+    <clipPath id="clippath-2">
+      <rect x="3.09" y="41.29" width=".62" height=".62" transform="translate(-28.41 14.58) rotate(-44.98)" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20-3" data-name="Unbenannter Verlauf 20" x1="-95.84" y1="-635.24" x2="-95.64" y2="-635.24" gradientTransform="translate(-1442.1 2000.07) rotate(45) scale(3.79)" xlink:href="#Unbenannter_Verlauf_20"/>
+    <clipPath id="clippath-3">
+      <rect x="5.46" y="43.87" width=".62" height=".62" transform="translate(-29.55 17.02) rotate(-45)" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20-4" data-name="Unbenannter Verlauf 20" x1="-99.56" y1="-635.39" x2="-99.36" y2="-635.39" gradientTransform="translate(-1430.4 2013.34) rotate(45) scale(3.79)" xlink:href="#Unbenannter_Verlauf_20"/>
+    <clipPath id="clippath-4">
+      <rect x="3.01" y="42.45" width=".62" height=".62" transform="translate(-29.26 14.87) rotate(-45)" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20-5" data-name="Unbenannter Verlauf 20" x1="-96.62" y1="-636.17" x2="-96.42" y2="-636.17" gradientTransform="translate(-1443.02 2006.42) rotate(45) scale(3.79)" xlink:href="#Unbenannter_Verlauf_20"/>
+    <clipPath id="clippath-5">
+      <rect x="4.07" y="41.75" width=".62" height=".62" transform="translate(-28.45 15.42) rotate(-45)" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20-6" data-name="Unbenannter Verlauf 20" x1="-96.93" y1="-634.84" x2="-96.73" y2="-634.84" gradientTransform="translate(-1437.13 2002.4) rotate(45) scale(3.79)" xlink:href="#Unbenannter_Verlauf_20"/>
+    <clipPath id="clippath-6">
+      <rect x="5.28" y="40.6" width=".62" height=".62" transform="translate(-27.3 15.95) rotate(-45.02)" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20-7" data-name="Unbenannter Verlauf 20" x1="-96.96" y1="-633.07" x2="-96.76" y2="-633.07" gradientTransform="translate(-1431.31 1996.86) rotate(45) scale(3.79)" xlink:href="#Unbenannter_Verlauf_20"/>
+    <clipPath id="clippath-7">
+      <rect x="6.31" y="44.4" width="1.14" height="1.14" transform="translate(-29.79 18.04) rotate(-45.01)" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20-8" data-name="Unbenannter Verlauf 20" x1="-43.3" y1="-626.96" x2="-43.1" y2="-626.96" gradientTransform="translate(-2892.15 3373.11) rotate(45) scale(7.02)" xlink:href="#Unbenannter_Verlauf_20"/>
+    <clipPath id="clippath-8">
+      <rect x="4.29" y="42.95" width=".83" height=".83" transform="translate(-29.27 16.02) rotate(-44.98)" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20-9" data-name="Unbenannter Verlauf 20" x1="-66.2" y1="-630.82" x2="-66.01" y2="-630.82" gradientTransform="translate(-2042.16 2569.4) rotate(45) scale(5.13)" xlink:href="#Unbenannter_Verlauf_20"/>
+    <clipPath id="clippath-9">
+      <rect x="7.41" y="40.26" width=".88" height=".88" transform="translate(-26.48 17.47) rotate(-45)" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20-10" data-name="Unbenannter Verlauf 20" x1="-61.79" y1="-627.06" x2="-61.59" y2="-627.06" gradientTransform="translate(-2153.96 2674.3) rotate(45) scale(5.41)" xlink:href="#Unbenannter_Verlauf_20"/>
+    <clipPath id="clippath-10">
+      <rect x="6.54" y="41.26" width=".88" height=".88" transform="translate(-27.45 17.16) rotate(-45.02)" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20-11" data-name="Unbenannter Verlauf 20" x1="-61.85" y1="-628.04" x2="-61.65" y2="-628.04" gradientTransform="translate(-2158.68 2679.7) rotate(45) scale(5.41)" xlink:href="#Unbenannter_Verlauf_20"/>
+    <clipPath id="clippath-11">
+      <polygon points="8.87 41.12 9.49 41.73 10.11 41.12 9.49 40.5 8.87 41.12" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20-12" data-name="Unbenannter Verlauf 20" x1="-59.23" y1="-626.03" x2="-59.03" y2="-626.03" gradientTransform="translate(-2252 2774.37) rotate(45) scale(5.64)" xlink:href="#Unbenannter_Verlauf_20"/>
+    <clipPath id="clippath-12">
+      <rect x="2.57" y="39.22" width=".52" height=".52" transform="translate(-27.09 13.57) rotate(-45)" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20-13" data-name="Unbenannter Verlauf 20" x1="-116.66" y1="-637.29" x2="-116.47" y2="-637.29" gradientTransform="translate(-1167.05 1733.18) rotate(45) scale(3.18)" xlink:href="#Unbenannter_Verlauf_20"/>
+    <clipPath id="clippath-13">
+      <path d="M5.69,43.09c0-.06.05-.13.12-.13s.13.06.13.13-.06.12-.13.12c-.07,0-.12-.06-.12-.12M5.69,42.63c0-.06.05-.12.12-.12s.13.06.13.12c0,.07-.06.13-.13.13s-.12-.06-.12-.13M5.11,42.9l.81.81.81-.81-.81-.81-.81.81Z" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20-14" data-name="Unbenannter Verlauf 20" x1="-32.65" y1="-625.29" x2="-32.45" y2="-625.29" gradientTransform="translate(-3422.58 3847.99) rotate(45) scale(8.18)" xlink:href="#Unbenannter_Verlauf_20"/>
+    <clipPath id="clippath-14">
+      <path d="M7.13,43.53c0-.06.05-.13.12-.13s.13.06.13.13-.06.12-.13.12c-.06,0-.12-.06-.12-.12M7.13,43.06c0-.06.05-.12.12-.12s.13.06.13.12c0,.07-.06.13-.13.13-.06,0-.12-.06-.12-.13M6.56,43.37l.81.81.81-.81-.81-.81-.81.81Z" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20-15" data-name="Unbenannter Verlauf 20" x1="-33.32" y1="-624.95" x2="-33.12" y2="-624.95" gradientTransform="translate(-3415.56 3850.64) rotate(45) scale(8.18)" xlink:href="#Unbenannter_Verlauf_20"/>
+    <clipPath id="clippath-15">
+      <path d="M8.34,42.51c0-.06.05-.13.12-.13s.13.06.13.13-.06.12-.13.12-.12-.05-.12-.12M8.34,42.06c0-.06.05-.12.12-.12s.13.06.13.12c0,.07-.06.13-.13.13-.07,0-.12-.06-.12-.13M7.52,42.08l.81.81.81-.81-.81-.81-.81.81Z" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20-16" data-name="Unbenannter Verlauf 20" x1="-33.21" y1="-624.17" x2="-33.01" y2="-624.17" gradientTransform="translate(-3410.16 3843.58) rotate(45) scale(8.18)" xlink:href="#Unbenannter_Verlauf_20"/>
+    <clipPath id="clippath-16">
+      <path d="M7.92,44.87c0-.06.05-.13.12-.13s.13.06.13.13-.06.12-.13.12-.12-.06-.12-.12M7.92,44.41c0-.06.05-.12.12-.12s.13.06.13.12c0,.07-.06.13-.13.13-.07,0-.12-.06-.12-.13M7.3,44.79l.81.81.81-.81-.81-.81-.81.81Z" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20-17" data-name="Unbenannter Verlauf 20" x1="-34.07" y1="-625.19" x2="-33.88" y2="-625.19" gradientTransform="translate(-3411.81 3857.77) rotate(45) scale(8.18)" xlink:href="#Unbenannter_Verlauf_20"/>
+    <clipPath id="clippath-17">
+      <path d="M9.05,43.62c0-.06.05-.13.12-.13s.13.06.13.13-.06.12-.13.12c-.07,0-.12-.05-.12-.12M8.2,43.79l.81.81.81-.81-.51-.51-.25.02-.04-.32-.81.81Z" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20-18" data-name="Unbenannter Verlauf 20" x1="-34.05" y1="-624.52" x2="-33.85" y2="-624.52" gradientTransform="translate(-3406.43 3851.96) rotate(45) scale(8.18)" xlink:href="#Unbenannter_Verlauf_20"/>
+    <clipPath id="clippath-18">
+      <path d="M9.05,43.16c0-.06.05-.12.12-.12s.13.06.13.12c0,.07-.06.13-.13.13-.07,0-.12-.06-.12-.13M8.6,42.9l.62.62.62-.62-.62-.62-.62.62Z" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20-19" data-name="Unbenannter Verlauf 20" x1="-45.02" y1="-625.45" x2="-44.82" y2="-625.45" gradientTransform="translate(-2806.45 3294.3) rotate(45) scale(6.86)" xlink:href="#Unbenannter_Verlauf_20"/>
+    <clipPath id="clippath-19">
+      <rect x="9.02" y="44.66" width="1.14" height="1.14" transform="translate(-29.18 20.04) rotate(-45.01)" style="fill: none;"/>
+    </clipPath>
+    <linearGradient id="Unbenannter_Verlauf_20-20" data-name="Unbenannter Verlauf 20" x1="-45.1" y1="-626.03" x2="-44.9" y2="-626.03" gradientTransform="translate(-2850.77 3348.67) rotate(45) scale(6.96)" xlink:href="#Unbenannter_Verlauf_20"/>
+  </defs>
+  <g id="Ebene_6" data-name="Ebene 6">
+    <g>
+      <rect width="48" height="48" style="fill: none;"/>
+      <g>
+        <g>
+          <path d="M19.25,43.11h-.24v-1.16h.22c.39,0,.88.03.88.55,0,.54-.46.61-.87.61M16.71,41.45h-.66c-.48-.59-1.16-.99-1.95-1.18h2.61v1.18h0ZM16.71,42.75h-.03c-.1-.44-.29-.83-.53-1.18h.56v1.18ZM16.71,45.36h-.46c.22-.34.38-.72.46-1.16v1.16ZM16.71,46.66h-2.22c.69-.22,1.27-.62,1.67-1.18h.55v1.18ZM14.39,45.49l-.34.34-.34-.34h0l-.13-.13h0l-.33-.33.27-.27c-.13.04-.26.06-.4.06-.5,0-.9-.25-1.09-.64h2.18s-.06.1-.08.15l.7.7-.39.39-.06.06ZM11.72,46.43l-.92-.92h.01s.13-.14.13-.14h0l.78-.78.92.92-.92.92ZM10.72,44.84c0-.06.05-.12.12-.12s.13.06.13.12c0,.07-.06.12-.13.12s-.12-.06-.12-.12M10.97,44.38c0,.07-.06.12-.13.12s-.12-.06-.12-.12.05-.12.12-.12.13.06.13.12M10.26,44.18h0l-.13-.13h0l-.47-.46.72-.71h0l.11-.11.11.11.71.71h0l-.46.46-.13.13-.24.24-.24-.24ZM11.51,43.94c.07,0,.13.06.13.12,0,.07-.06.12-.13.12s-.12-.06-.12-.12.05-.12.12-.12M11.51,43.49c.07,0,.13.06.13.12,0,.07-.06.12-.13.12s-.12-.06-.12-.12c0-.07.05-.12.12-.12M11.87,42.57c.07,0,.13.06.13.12,0,.02,0,.04-.02.06,0,.01-.02.02-.03.04h0s0,0-.01,0h0s0,0-.01,0h0s0,0-.01,0h0s0,0-.01,0h0s0,0-.01,0h-.01s0,0,0,0h-.01s0,0,0,0,0,0-.01,0h0s0,0-.01,0h0s0,0-.01,0h0s-.02-.02-.03-.04c-.01-.02-.02-.04-.02-.06.01-.06.07-.12.14-.12M11.87,42.11c.07,0,.13.06.13.12,0,.07-.06.12-.13.12s-.12-.06-.12-.12c0-.06.05-.12.12-.12M13.69,42.88l.13-.13h-1.65c.21-.27.55-.45.97-.45.34,0,.62.12.83.31l.61-.61.76.75h0l.13.13h0l.04.04h0l-.92.92-.21-.21c0,.15-.04.29-.08.43h-2.3c-.06-.15-.08-.31-.08-.48,0-.25.06-.49.18-.69h1.62s0,0,0,0ZM24.31,43.48c0-.71.58-1.28,1.3-1.28.54,0,1.02.31,1.41.67l-.07-2.51c-.5-.18-1.06-.27-1.6-.27-1.32,0-2.44.71-3.02,1.79-.29-1.16-1.3-1.72-2.59-1.72H1.01s0,.13,0,.13h11.16c-.79.18-1.47.6-1.95,1.18H1s0,.13,0,.13h9.12c-.25.34-.43.74-.53,1.18H1s0,.13,0,.13h8.55c-.04.21-.06.43-.06.66,0,.18.01.35.04.52H1s0,.13,0,.13h8.55c.08.44.24.83.46,1.18H1s0,.13,0,.13h9.09c.41.55.99.95,1.67,1.18H1s0,.13,0,.13h11.38s-.35-.35-.35-.35l.92-.92.92.92-.35.35h.47s5.01,0,5.01,0v-2h1.22c.74,0,1.33-.27,1.71-.73.24,1.62,1.6,2.81,3.3,2.81.43,0,1.32-.08,1.7-.26l.07-2.46c-.39.38-.82.61-1.37.61-.71,0-1.33-.55-1.33-1.28"/>
+          <g style="clip-path: url(#clippath);">
+            <polygon points="2.29 39.33 3.16 40.21 2.29 41.08 1.42 40.21 2.29 39.33" style="fill: url(#Unbenannter_Verlauf_20);"/>
+          </g>
+          <g style="clip-path: url(#clippath-1);">
+            <polygon points="4 39.54 4.86 40.4 4 41.27 3.13 40.4 4 39.54" style="fill: url(#Unbenannter_Verlauf_20-2);"/>
+          </g>
+          <g style="clip-path: url(#clippath-2);">
+            <polygon points="3.39 40.72 4.26 41.59 3.39 42.46 2.53 41.59 3.39 40.72" style="fill: url(#Unbenannter_Verlauf_20-3);"/>
+          </g>
+          <g style="clip-path: url(#clippath-3);">
+            <polygon points="5.77 43.31 6.64 44.18 5.77 45.05 4.9 44.18 5.77 43.31" style="fill: url(#Unbenannter_Verlauf_20-4);"/>
+          </g>
+          <g style="clip-path: url(#clippath-4);">
+            <polygon points="3.32 41.89 4.19 42.76 3.32 43.62 2.45 42.76 3.32 41.89" style="fill: url(#Unbenannter_Verlauf_20-5);"/>
+          </g>
+          <g style="clip-path: url(#clippath-5);">
+            <polygon points="4.38 41.18 5.25 42.06 4.38 42.92 3.51 42.06 4.38 41.18" style="fill: url(#Unbenannter_Verlauf_20-6);"/>
+          </g>
+          <g style="clip-path: url(#clippath-6);">
+            <polygon points="5.59 40.04 6.45 40.91 5.59 41.78 4.72 40.91 5.59 40.04" style="fill: url(#Unbenannter_Verlauf_20-7);"/>
+          </g>
+          <g style="clip-path: url(#clippath-7);">
+            <polygon points="6.88 43.36 8.49 44.97 6.88 46.58 5.27 44.97 6.88 43.36" style="fill: url(#Unbenannter_Verlauf_20-8);"/>
+          </g>
+          <g style="clip-path: url(#clippath-8);">
+            <polygon points="4.71 42.18 5.89 43.36 4.71 44.53 3.53 43.36 4.71 42.18" style="fill: url(#Unbenannter_Verlauf_20-9);"/>
+          </g>
+          <g style="clip-path: url(#clippath-9);">
+            <polygon points="7.84 39.45 9.09 40.69 7.84 41.93 6.6 40.69 7.84 39.45" style="fill: url(#Unbenannter_Verlauf_20-10);"/>
+          </g>
+          <g style="clip-path: url(#clippath-10);">
+            <polygon points="6.98 40.46 8.22 41.7 6.98 42.94 5.74 41.7 6.98 40.46" style="fill: url(#Unbenannter_Verlauf_20-11);"/>
+          </g>
+          <g style="clip-path: url(#clippath-11);">
+            <polygon points="9.49 39.87 10.73 41.12 9.49 42.36 8.25 41.12 9.49 39.87" style="fill: url(#Unbenannter_Verlauf_20-12);"/>
+          </g>
+          <g style="clip-path: url(#clippath-12);">
+            <polygon points="2.83 38.75 3.56 39.48 2.83 40.21 2.11 39.48 2.83 38.75" style="fill: url(#Unbenannter_Verlauf_20-13);"/>
+          </g>
+          <g>
+            <path d="M2.66,42.41c.07,0,.13.06.13.12,0,.07-.06.13-.13.13s-.12-.06-.12-.13c0-.06.05-.12.12-.12M2.66,42.87c.07,0,.13.06.13.13s-.06.12-.13.12-.12-.06-.12-.12c0-.07.05-.13.12-.13"/>
+            <path d="M3.99,43.13c.07,0,.13.06.13.12,0,.07-.06.13-.13.13s-.12-.06-.12-.13c0-.06.05-.12.12-.12M3.99,43.59c.07,0,.13.06.13.13s-.06.12-.13.12-.12-.06-.12-.12c0-.07.05-.13.12-.13"/>
+            <path d="M6.26,41.35c.07,0,.13.06.13.12,0,.07-.06.13-.13.13s-.12-.06-.12-.13c0-.06.05-.12.12-.12M6.26,41.81c.07,0,.13.06.13.13s-.06.12-.13.12-.12-.06-.12-.12c0-.07.05-.13.12-.13"/>
+            <path d="M8.85,40.75c.07,0,.13.06.13.12,0,.07-.06.13-.13.13s-.12-.06-.12-.13c0-.06.05-.12.12-.12M8.85,41.2c.07,0,.13.06.13.13s-.06.12-.13.12-.12-.06-.12-.12c0-.07.05-.13.12-.13"/>
+            <path d="M7.37,41.67c.07,0,.13.06.13.12,0,.07-.06.13-.13.13s-.12-.06-.12-.13c0-.06.05-.12.12-.12M7.37,42.13c.07,0,.13.06.13.13s-.06.12-.13.12-.12-.06-.12-.12c0-.07.05-.13.12-.13"/>
+            <path d="M4.97,42.51c.07,0,.13.06.13.12,0,.07-.06.13-.13.13s-.12-.06-.12-.13c0-.06.05-.12.12-.12M4.97,42.97c.07,0,.13.06.13.13s-.06.12-.13.12-.12-.06-.12-.12c0-.07.05-.13.12-.13"/>
+          </g>
+          <g style="clip-path: url(#clippath-13);">
+            <polygon points="5.91 41.29 7.53 42.9 5.91 44.51 4.3 42.9 5.91 41.29" style="fill: url(#Unbenannter_Verlauf_20-14);"/>
+          </g>
+          <g style="clip-path: url(#clippath-14);">
+            <polygon points="7.36 41.76 8.97 43.38 7.36 44.99 5.75 43.38 7.36 41.76" style="fill: url(#Unbenannter_Verlauf_20-15);"/>
+          </g>
+          <g style="clip-path: url(#clippath-15);">
+            <polygon points="8.32 40.46 9.94 42.08 8.32 43.69 6.71 42.08 8.32 40.46" style="fill: url(#Unbenannter_Verlauf_20-16);"/>
+          </g>
+          <g>
+            <path d="M10.34,43.23c.07,0,.13.06.13.12,0,.07-.06.13-.13.13s-.12-.06-.12-.13c0-.06.05-.12.12-.12M10.34,43.69c.07,0,.13.06.13.13s-.06.12-.13.12-.12-.06-.12-.12c0-.06.05-.13.12-.13"/>
+            <path d="M11.42,45.21c.07,0,.13.06.13.12,0,.07-.06.13-.13.13s-.12-.06-.12-.13c0-.06.05-.12.12-.12M11.42,45.67c.07,0,.13.06.13.13s-.06.12-.13.12-.12-.06-.12-.12c0-.06.05-.13.12-.13"/>
+            <path d="M13.88,44.55c.07,0,.13.06.13.12,0,.07-.06.13-.13.13s-.12-.06-.12-.13c0-.06.05-.12.12-.12M13.88,45c.07,0,.13.06.13.13s-.06.12-.13.12-.12-.06-.12-.12c0-.06.05-.13.12-.13"/>
+            <path d="M4.96,40.66c.07,0,.13.06.13.12,0,.07-.06.13-.13.13s-.12-.06-.12-.13c0-.06.05-.12.12-.12M4.96,41.12c.07,0,.13.06.13.13s-.06.12-.13.12-.12-.06-.12-.12c0-.07.05-.13.12-.13"/>
+            <path d="M7.1,44.42c.07,0,.13.06.13.12,0,.07-.06.13-.13.13s-.12-.06-.12-.13c0-.06.05-.12.12-.12M7.1,44.88c.07,0,.13.06.13.13s-.06.12-.13.12-.12-.06-.12-.12c0-.07.05-.13.12-.13"/>
+          </g>
+          <g style="clip-path: url(#clippath-16);">
+            <polygon points="8.11 43.18 9.72 44.79 8.11 46.4 6.5 44.79 8.11 43.18" style="fill: url(#Unbenannter_Verlauf_20-17);"/>
+          </g>
+          <g>
+            <path d="M6.47,40.82s.03-.06.06-.06.06.03.06.06c0,.04-.04.06-.06.06s-.06-.01-.06-.06M6.47,40.43s.03-.06.06-.06.06.03.06.06c0,.04-.04.06-.06.06-.03,0-.06-.01-.06-.06"/>
+            <path d="M7.18,40.3c.07,0,.13.06.13.12,0,.07-.06.13-.13.13s-.12-.06-.12-.13c0-.06.05-.12.12-.12M7.18,40.75c.07,0,.13.06.13.13s-.06.12-.13.12-.12-.06-.12-.12c0-.07.05-.13.12-.13"/>
+            <path d="M5.21,44.35s.03-.07.06-.07.07.03.07.07-.04.06-.07.06c-.03,0-.06-.01-.06-.06M5.21,43.93s.03-.07.06-.07.07.03.07.07-.04.06-.07.06-.06-.02-.06-.06"/>
+            <path d="M5.96,44.78c.07,0,.13.06.13.12,0,.07-.06.13-.13.13s-.12-.06-.12-.13c0-.06.05-.12.12-.12M5.96,45.24c.07,0,.13.06.13.13s-.06.12-.13.12-.12-.06-.12-.12c0-.06.05-.13.12-.13"/>
+            <path d="M3.47,40.42s.03-.07.06-.07.07.03.07.07-.04.06-.07.06c-.02,0-.06-.01-.06-.06M3.47,39.99s.03-.07.06-.07.07.03.07.07-.04.06-.07.06c-.02,0-.06-.02-.06-.06"/>
+            <path d="M2.31,39.56s.02-.06.06-.06.06.03.06.06c0,.04-.04.05-.06.05s-.06-.01-.06-.05M2.31,39.22s.02-.06.06-.06.06.03.06.06c0,.04-.04.05-.06.05s-.06-.01-.06-.05"/>
+            <path d="M4.01,41.74s.03-.06.06-.06.06.03.06.06c0,.04-.04.06-.06.06-.03,0-.06-.01-.06-.06M4.01,41.36s.03-.06.06-.06.06.03.06.06c0,.04-.04.06-.06.06-.03,0-.06-.02-.06-.06"/>
+            <path d="M2.76,41.73s.03-.06.06-.06.06.03.06.06c0,.04-.04.06-.06.06s-.06-.01-.06-.06M2.76,41.34s.03-.06.06-.06.06.03.06.06c0,.04-.04.06-.06.06s-.06-.02-.06-.06"/>
+            <path d="M1.8,40.43s.03-.06.06-.06c.04,0,.06.03.06.06,0,.04-.04.06-.06.06-.02,0-.06-.01-.06-.06M1.8,40.04s.03-.06.06-.06c.04,0,.06.03.06.06,0,.04-.04.06-.06.06-.02,0-.06-.02-.06-.06"/>
+            <path d="M14.3,42.52c.07,0,.13.06.13.12,0,.07-.06.13-.13.13s-.12-.06-.12-.13c0-.06.05-.12.12-.12M14.3,42.98c.07,0,.13.06.13.13s-.06.12-.13.12-.12-.06-.12-.12c0-.07.05-.13.12-.13"/>
+          </g>
+          <g style="clip-path: url(#clippath-17);">
+            <polygon points="9.01 42.18 10.62 43.79 9.01 45.4 7.4 43.79 9.01 42.18" style="fill: url(#Unbenannter_Verlauf_20-18);"/>
+          </g>
+          <g style="clip-path: url(#clippath-18);">
+            <polygon points="9.22 41.66 10.46 42.9 9.22 44.14 7.98 42.9 9.22 41.66" style="fill: url(#Unbenannter_Verlauf_20-19);"/>
+          </g>
+          <g style="clip-path: url(#clippath-19);">
+            <polygon points="9.59 43.62 11.2 45.24 9.59 46.85 7.98 45.24 9.59 43.62" style="fill: url(#Unbenannter_Verlauf_20-20);"/>
+          </g>
+          <path d="M36.03,40.15v3.93c0,1.94-1.22,2.81-3.07,2.81-1.86,0-3.07-.88-3.07-2.81v-3.93h2.42v3.7c0,.52.02.98.66.98.64,0,.66-.46.66-.98v-3.7h2.42Z"/>
+          <path d="M39.81,44.38s-.4-1.74-.44-2.02h-.09s-.44,2.02-.44,2.02h.97ZM38.22,46.78h-2.56s2.3-6.64,2.3-6.64h2.67s2.37,6.64,2.37,6.64h-2.56s-.22-.83-.22-.83h-1.82s-.19.83-.19.83Z"/>
+          <path d="M41.3,40.43h.04s.04,0,.05,0c.02,0,.03-.02.03-.04s0-.04-.01-.04c-.01,0-.04-.01-.06-.01h-.04s0,.11,0,.11ZM41.5,40.61h-.07,0s0,0,0-.01h0s0-.04,0-.04c0-.04,0-.06-.03-.06-.01,0-.03,0-.06,0h-.04s0,.13,0,.13h-.07v-.34h.12s.07,0,.09.01c.04.01.06.04.06.09,0,.04-.01.06-.04.07,0,0-.01,0-.02,0,.01,0,.02.01.03.03.01.02.02.04.02.06v.02s0,.01,0,.02h0s0,.03,0,.03ZM41.35,40.19c-.07,0-.13.02-.18.07s-.07.11-.07.18.02.13.07.18.11.07.18.07.13-.02.18-.07.07-.11.07-.18-.02-.13-.07-.18c-.05-.04-.11-.07-.18-.07M41.35,40.74c-.08,0-.15-.03-.21-.09-.06-.06-.09-.13-.09-.22s.03-.15.09-.21c.06-.06.13-.09.21-.09.08,0,.15.03.21.09.06.06.09.13.09.21,0,.08-.03.15-.09.22-.06.06-.13.09-.21.09"/>
+        </g>
+        <path d="M47.67,41.03c0,.16-.12.28-.28.28h-4.46c-.16,0-.29-.11-.29-.28v-1.53c-.36.21-.8.14-1.06-.16s-.27-.76-.01-1.07.7-.4,1.07-.18v-1.54c0-.16.13-.28.29-.27h1.53c-.22-.36-.14-.8.16-1.06s.76-.27,1.07-.01.4.7.18,1.07h1.53c.16,0,.27.12.28.27v1.73s-.03.08-.05.08c-.03.01-.08,0-.1-.02-.26-.26-.67-.26-.92,0s-.25.67,0,.92.66.25.92-.01c.02-.02.07-.03.09-.02.03.01.06.05.06.08v1.72ZM42.92,41.13h4.47c.06,0,.1-.04.1-.1v-1.53c-.36.22-.81.14-1.07-.17s-.26-.76,0-1.07.69-.39,1.07-.17v-1.54c0-.06-.04-.09-.09-.09h-1.73s-.07-.03-.08-.06c0-.02,0-.07.02-.09.26-.26.26-.67,0-.93s-.67-.25-.92,0-.25.66.01.92c.02.02.03.07.02.1s-.05.06-.08.06h-1.73c-.05,0-.09.04-.09.09v1.73s-.03.07-.06.08c-.03.01-.07,0-.1-.02-.26-.26-.67-.26-.92,0s-.25.67,0,.92.66.25.92-.02c.03-.03.08-.03.1-.01.03.02.05.05.05.09v1.71c0,.06.03.1.1.1Z" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .3px;"/>
+      </g>
+      <g>
+        <path d="M44.26,32.66s-1.49-7.85-10.4-8.09" style="fill: none; stroke: #000; stroke-linecap: round; stroke-miterlimit: 10;"/>
+        <polygon points="36.06 22.74 34.19 24.59 36.05 26.47 34.46 26.46 32.6 24.59 34.48 22.73 36.06 22.74"/>
+      </g>
+      <g>
+        <g>
+          <rect x="17.68" y="1" width="12.63" height="32.85" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .75px;"/>
+          <line x1="17.68" y1="14.27" x2="30.32" y2="14.27" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .75px;"/>
+          <line x1="17.68" y1="20.58" x2="30.32" y2="20.58" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .75px;"/>
+          <line x1="17.82" y1="4.2" x2="30.45" y2="4.2" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .5px;"/>
+          <line x1="17.82" y1="7.56" x2="30.45" y2="7.56" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .5px;"/>
+          <line x1="17.55" y1="10.91" x2="30.18" y2="10.91" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .5px;"/>
+          <line x1="17.82" y1="23.99" x2="30.45" y2="23.99" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .5px;"/>
+          <line x1="17.82" y1="27.4" x2="30.45" y2="27.4" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .5px;"/>
+          <line x1="17.55" y1="30.81" x2="30.18" y2="30.81" style="fill: none; stroke: #000; stroke-miterlimit: 10; stroke-width: .5px;"/>
+        </g>
+        <text transform="translate(20.26 19.55)" style="font-family: Verdana-Bold, Verdana; font-size: 5.26px; font-weight: 700;"><tspan x="0" y="0">S7</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

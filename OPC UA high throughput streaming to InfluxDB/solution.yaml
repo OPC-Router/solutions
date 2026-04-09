@@ -1,0 +1,138 @@
+FormatVersion: 1
+Tags:
+  - Influx
+  - OPC
+  - MDC
+IconFile: "influx.svg"
+DisplayName:
+  DE: "OPC UA Streaming zu InfluxDB"
+  EN: "OPC UA streaming to InfluxDB"
+ShortDescription:
+  DE: "OPC UA Datenübertragung zu InfluxDB mit hohem Datendurchsatz"
+  EN: "OPC UA data transfer to InfluxDB with high data throughput"
+Parameters:
+  multi_datachange_opc_ua_client_instance_name:
+    Type: "FileName"
+    Label:
+      DE: "Multi Datachange OPC UA Client Name"
+      EN: "Multi Datachange OPC UA Client name"
+    HelpText:
+      DE: "Eindeutiger Name für die Multi Datachange OPC UA Client Instanz"
+      EN: "Unique name for the Multi Datachange OPC UA Client instance"
+    Default: "Multi Datachange OPC UA Client"
+  opc_client_endpoint:
+    Type: "String"
+    Label:
+      DE: "OPC UA Endpunkt"
+      EN: "OPC UA endpoint"
+    HelpText:
+      DE: "Adresse für die Verbindung zum OPC UA Server"
+      EN: "Address for the connection to the OPC UA server"
+    Default: "opc.tcp://localhost:49320"
+  multi_datachange_influxdb_instance_name:
+    Type: "FileName"
+    Label:
+      DE: "Multi Datachange InfluxDB Plug-in Name"
+      EN: "Multi Datachange InfluxDB Plug-in name"
+    HelpText:
+      DE: "Eindeutiger Name für die InfluxDB Instanz"
+      EN: "Unique name for the InfluxDB instance"
+    Default: "Multi Datachange InfluxDB"
+  influx_url:
+    Type: "String"
+    Label:
+      DE: "InfluxDB Server Adresse"
+      EN: "InfluxDB server address"
+    HelpText:
+      DE: "Adresse für die Verbindung zur InfluxDB. Die Adresse muss mit vorangestelltem http(s):// geschrieben werden"
+      EN: "Address for the connection to the InfluxDB server. The address needs to be written with a leading http(s)://"
+  influxdb_username:
+    Type: "String"
+    Label:
+      DE: "InfluxDB Benutzername"
+      EN: "InfluxDB username"
+    HelpText:
+      DE: "Benutzername für die Verbindung zur InfluxDB"
+      EN: "Username for the connection to InfluxDB"
+  influx_password_key:
+    Type: "SecretKey"
+    Label:
+      DE: "InfluxDB Passwort"
+      EN: "InfluxDB password"
+    HelpText:
+      DE: "Passwort für die Verbindung zur InfluxDB"
+      EN: "Password for the connection to InfluxDB"
+  influxdb_organization_name:
+    Type: "String"
+    Label:
+      DE: "Name der InfluxDB Organisation"
+      EN: "Name of the InfluxDB Organization"
+    HelpText:
+      DE: "Name der InfluxDB Organisation, die für die Verbindung und das Schreiben der Daten verwendet wird"
+      EN: "Name of the InfluxDB Organization used for the connection and for writing the data"
+  influxdb_bucket_name:
+    Type: "String"
+    Label:
+      DE: "Name des InfluxDB Buckets"
+      EN: "Name of the InfluxDB Bucket"
+    HelpText:
+      DE: "Name des InfluxDB Buckets, in den die Daten geschrieben werden"
+      EN: "Name of the InfluxDB Bucket to which the data is written"
+  mdc_to_influx_connection_name:
+    Type: "FileName"
+    Label:
+      DE: "Verbindungsname"
+      EN: "Connection name"
+    HelpText:
+      DE: "Name der Verbindung, die für das Senden von Daten an InfluxDB verwendet wird"
+      EN: "Name of the connection used for sending data to InfluxDB"
+    Default: "Multi Datachange Trigger to Influx"
+  mdc_trigger_path:
+    Type: "String"
+    Label:
+      DE: "Multi Datachange Trigger Pfad"
+      EN: "Multi Datachange Trigger path"
+    HelpText:
+      DE: "Der Pfad, unter dem alle Datenpunkte rekursiv überwacht werden"
+      EN: "The path under which all data points are monitored recursively"
+    Default: "bp=Objects;"
+  measurement:
+    Type: "String"
+    Label:
+      DE: "InfluxDB Messreihe"
+      EN: "InfluxDB Measurement"
+    HelpText:
+      DE: "Messreihe, in die die Daten geschrieben werden"
+      EN: "Measurement to which the data is written"
+  refresh_mdc_items:
+    Type: "Boolean"
+    Label:
+      DE: "Multi Datachange Trigger Items aktualisieren"
+      EN: "Refresh Multi Datachange Trigger items"
+    HelpText:
+      DE: |-
+        Wenn diese Option aktiv ist, werden zyklisch die überwachten Items aktualisiert.
+        Diese Option sollte nur aktiviert werden, wenn die Datenstruktur nicht statisch ist und sich verändern kann.
+      EN: |-
+        When this option is enabled, the monitored items are updated cyclically.
+        This option should only be enabled if the data structure is not static and may change.
+    Default: false
+  use_stacked_inserts:
+    Type: "Boolean"
+    Label:
+      DE: "Gestapelte und verzögerte/asynchrone Inserts für InfluxDB verwenden"
+      EN: "Use stacked delayed/asynchronous inserts for InfluxDB"
+    HelpText:
+      DE: >-
+        Die Verwendung von Batch- und verzögerten/asynchronen Inserts ist wesentlich effizienter und ermöglicht deutlich mehr Übertragungen pro Sekunde. 
+        Fehler während der Übertragung können jedoch nicht zu einzelnen Übertragungen oder Verbindungen zurückverfolgt werden. 
+        Im Status werden fehlgeschlagene Übertragungen weiterhin als erfolgreich angezeigt. 
+        Fehler, die während einer Übertragung auftreten, sind nur in den Verbindung Log-Dateien zu sehen. 
+        Diese Methode ist nicht mit der Funktion „Store And Forward“ kompatibel.
+      EN: >-
+        Using batch and delayed/asynchronous inserts is much more efficient and allows many more transfers per second. 
+        However, errors during transfers cannot be traced back to individual transfers or connections. 
+        In the status view, failed transfers will still appear as successful. 
+        Errors that occur during a transfer can only be seen in the Connection log files. 
+        This method is not compatible with the 'Store And Forward' function.
+    Default: true

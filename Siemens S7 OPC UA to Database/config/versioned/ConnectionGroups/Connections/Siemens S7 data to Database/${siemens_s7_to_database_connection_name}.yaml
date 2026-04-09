@@ -1,0 +1,60 @@
+ChangedUtcTimestamp: 2025-12-16T15:02:51.4763294Z
+PublishedUtcTimestamp: 0001-01-01T00:00:00.0000000Z
+SavedInVersion: 5.6.5000.0
+TransferObjects:
+- ChangedUTCTimestamp: 2025-11-18T12:21:55.1650000Z
+  ConfigType: 3001
+  GridSnapPixel: 16
+  Groups:
+  - Name: Items
+    _clrType:
+    - inray.OPCRouter.OPCPlugIn.Config.OPCTransferObject.OpcRegularItemsGroup, inray.OPCRouter4.OPCPlugIn
+  - Name: Value Timestamp
+    _clrType:
+    - inray.OPCRouter.OPCPlugIn.Config.OPCTransferObject.OpcValueTimestampGroup, inray.OPCRouter4.OPCPlugIn
+  - Name: Quality-ID
+    _clrType:
+    - inray.OPCRouter.OPCPlugIn.Config.OPCTransferObject.OpcQualityIntGroup, inray.OPCRouter4.OPCPlugIn
+  - Name: Quality string
+    _clrType:
+    - inray.OPCRouter.OPCPlugIn.Config.OPCTransferObject.OpcQualityStringGroup, inray.OPCRouter4.OPCPlugIn
+  LocalId: 1374814549
+  PlugIn: 2511181211-163160691-C201E372-0000826A
+  PlugInType: 3100
+  PosX: 20
+  PosY: 140
+  _clrType:
+  - inray.OPCRouter.OPCPlugIn.Config.OPCTransferObjectConfig, inray.OPCRouter4.OPCPlugIn
+- ChangedUTCTimestamp: 2025-11-18T12:50:49.4500000Z
+  GridSnapPixel: 18
+  Groups:
+  - Name: Columns
+  - Name: Filter
+    _clrType:
+    - inray.OPCRouter.DBPlugIn.Config.DbFilterCollection, inray.OPCRouter4.DBPlugIn
+  - Name: AffectedRows
+  LocalId: 433814712
+  PlugIn: 2511181246-576662657-29011104-0000C9C1
+  PosX: 440
+  PosY: 100
+  _clrType:
+  - inray.OPCRouter.DBPlugIn.Config.DBTransferObjectConfig, inray.OPCRouter4.DBPlugIn
+- ChangedUTCTimestamp: 2025-11-18T12:51:31.0210000Z
+  DesignerExpression: 0 * * ? * ? *
+  Expression: 0 * * ? * ? *
+  GridSnapPixel: 5
+  LocalId: 1274624265
+  PlugIn: BasePlugInConfig
+  PosX: 20
+  PosY: 20
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.Cron.CronTriggerConfig, inray.OPCRouter4.BasePlugIn
+- ChangedUTCTimestamp: 2026-03-27T15:08:26.2940000Z
+  GridSnapPixel: 18
+  LocalId: 961147132
+  PlugIn: BasePlugInConfig
+  PosX: 840
+  PosY: 20
+  Summary: <p>The Siemens S7 access data is preselected in the OPC Data Access Transfer Object.</p><p><br></p><p>For this connection to be functional the OPC items to be read must be configured.</p><p>And the DB Insert Transfer object needs to be configured with a table and columns.</p>
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.Note.NoteTransferObjectConfig, inray.OPCRouter4.BasePlugIn

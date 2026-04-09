@@ -1,0 +1,51 @@
+FormatVersion: 1
+Tags:
+  - Notifications
+  - REST
+IconFile: "microsoft-teams-notifications.svg"
+DisplayName:
+  DE: "Microsoft Teams Benachrichtigungen"
+  EN: "Microsoft Teams notifications"
+ShortDescription:
+  DE: "Senden von Benachrichtigungen an Microsoft Teams mit Workflows"
+  EN: "Sending notifications to Microsoft Teams via Workflows"
+Parameters:
+  teams_workflows_instance_name:
+    Type: "FileName"
+    Label:
+      DE: "Teams Workflows REST Client Name"
+      EN: "Teams Workflows REST Client name"
+    HelpText:
+      DE: "Eindeutiger Name für die Teams Workflows REST Client Instanz"
+      EN: "Unique name for the Teams Workflows REST Client instance"
+    Default: "Teams Workflows"
+  rest_host_endpoint:
+    Type: "String"
+    Label:
+      DE: "REST Host-URL"
+      EN: "REST host URL"
+    HelpText:
+      DE: "Hier sollte der Teil des Webhook Links bis :443 eingetragen werden."
+      EN: "The part of the webhook link up to :443 should be entered here."
+  rest_to_url_endpoint:
+    Type: "String"
+    Label:
+      DE: "REST URL-Endpunkt"
+      EN: "REST URL endpoint"
+    HelpText:
+      DE: "Endpunkt für das Senden einer Teams-Webhookanforderung aus dem Workflow. Hier sollte der Teil des Webhook Links hinter :443 eingetragen werden."
+      EN: "Endpoint for sending a Teams webhook request from the workflow. The part of the webhook link after :443 should be entered here."
+  teams_notifications_connection_name:
+    Type: "FileName"
+    Label:
+      DE: "Teams Benachrichtigungen Verbindungsname"
+      EN: "Teams notifications connection name"
+    HelpText:
+      DE: "Name der Verbindung, die für das Senden von Benachrichtigungen an Microsoft Teams verwendet wird."
+      EN: "Name of the connection used for sending notifications to Microsoft Teams."
+    Default: "Send Microsoft Teams notifications"
+  teams_notification_text:
+    Type: "String"
+    Label:
+      DE: "Benachrichtigungsinhalt"
+      EN: "Notification content"

@@ -7,4 +7,4 @@ Das Senden eines dynamischen Textes kann in der Verbindung konfiguriert werden. 
 
 ##### Erstellen des Webhooks
 
-Eine [Anleitung zum Senden von Nachrichten über Webhooks](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks/) befindet sich in der Dokumentation von Slack. In der Anleitung wird erklärt, wie der zum Senden der Nachrichten benötigte Incoming Webhook erstellt wird.
+Eine [Anleitung zum Senden von Nachrichten über Incoming Webhooks](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks/) befindet sich in der Dokumentation von Slack. In der Anleitung wird erklärt, wie der zum Senden der Nachrichten benötigte Incoming Webhook erstellt wird.

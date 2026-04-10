@@ -43,7 +43,7 @@ TransferObjects:
   LocalId: 65536
   PlugIn: 2402021319-350676956-50130D05-00006E59
   PosX: 20
-  PosY: 140
+  PosY: 180
   URL: "${rest_bearer_to_url}"
   _clrType:
   - inray.OPCRouter.RestPlugIn.Client.Config.RestTransferObjectConfig, inray.OPCRouter4.RestPlugIn
@@ -69,7 +69,7 @@ TransferObjects:
   LocalId: 65539
   PlugIn: VariablesPlugInConfig
   PosX: 600
-  PosY: 260
+  PosY: 300
   _clrType:
   - inray.OPCRouter.VariablesPlugIn.Config.VariablesTransferObjectConfig, inray.OPCRouter4.VariablesPlugIn
 - ChangedUTCTimestamp: 2020-03-27T15:23:58.0000000Z
@@ -94,7 +94,7 @@ TransferObjects:
   JsonDocument: '{"Success":true,"Error":null,"Data":{"Token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMyZTJlYWM1LTgwMDgtNDMwYS1iZThhLWZhN2NiZGY0YzNjMCIsIm5iZiI6MTc2NTg4NjY5OSwiZXhwIjoxNzY1ODkwMjk5LCJpYXQiOjE3NjU4ODY2OTksImlzcyI6Imh0dHBzOi8vd3d3LnF1aWNrcGlja2RlYWwuY29tLyIsImF1ZCI6Imh0dHBzOi8vd3d3LnF1aWNrcGlja2RlYWwuY29tLyJ9.x5vg_XEAtK66Bf5Pz1FzVIazQbNFzFm4I3bZpcSDNK8","Created":"2025-12-16T12:04:59.5074817+00:00","Expires":"2025-12-16T13:04:59.5073971+00:00"}}'
   LocalId: 1930444388
   PlugIn: BasePlugInConfig
-  PosX: 360
-  PosY: 200
+  PosX: 380
+  PosY: 240
   _clrType:
   - inray.OPCRouter.BasePlugIn.Config.JSON.JsonReadTransferObjectConfig, inray.OPCRouter4.BasePlugIn

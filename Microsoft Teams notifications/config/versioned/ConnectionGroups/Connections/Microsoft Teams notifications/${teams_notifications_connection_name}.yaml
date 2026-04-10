@@ -52,7 +52,7 @@ TransferObjects:
   LocalId: 720776092
   Method: Post
   PlugIn: 2602161320-409778489-5C2DE80B-00012E90
-  PosX: 480
+  PosX: 540
   PosY: 20
   RequestFormat: application/json
   URL: ${rest_to_url_endpoint}
@@ -91,7 +91,7 @@ TransferObjects:
     }
   LocalId: 762033744
   PlugIn: BasePlugInConfig
-  PosX: 260
+  PosX: 300
   PosY: 80
   _clrType:
   - inray.OPCRouter.BasePlugIn.Config.JSON.JsonWriteTransferObjectConfig, inray.OPCRouter4.BasePlugIn

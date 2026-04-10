@@ -7,12 +7,12 @@ Sending a dynamic text can be configured in the connection. Changing the card is
 
 ##### Instructions for setting up notifications with Workflows in Microsoft Teams
 
-1. Click on the ... menu in a chat or channel and select “Workflows,” or open the Workflows app.
-2. Click on “All Templates.”
-3. Search for ‘Webhook’ and select either “Send webhook notifications to a channel” or “Send webhook notifications to a chat.”
+1. Click on the ... menu in a chat or channel and select "Workflows," or open the Workflows app.
+2. Click on "All Templates."
+3. Search for "Webhook" and select either "Send webhook notifications to a channel" or "Send webhook notifications to a chat."
 4. Configure the channel or chat to which the notification should be sent.
-5. Click “Save.”
-6. Copy the webhook link using the “Copy webhook link” button.
+5. Click "Save."
+6. Copy the webhook link using the "Copy webhook link" button.
 
 ##### Tip
 

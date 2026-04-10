@@ -43,7 +43,7 @@ Parameters:
     HelpText:
       DE: "Name der Verbindung, die für das Senden von Benachrichtigungen an Microsoft Teams verwendet wird."
       EN: "Name of the connection used for sending notifications to Microsoft Teams."
-    Default: "Send Microsoft Teams notifications"
+    Default: "Send Microsoft Teams notification"
   teams_notification_text:
     Type: "String"
     Label:

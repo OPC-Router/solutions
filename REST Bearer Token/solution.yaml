@@ -71,7 +71,7 @@ Parameters:
       DE: "Bearer Token Variablenname"
       EN: "Bearer Token variable name"
     HelpText:
-      DE: "Name der Variablen, in der der Bearer Token gespeichert wird"
+      DE: "Name der Variable, in der der Bearer Token gespeichert wird"
       EN: "Name of the variable that stores the Bearer Token"
     Default: "Bearer Token"
   request_data_variable_name:
@@ -80,6 +80,6 @@ Parameters:
       DE: "Daten Variablenname"
       EN: "Data variable name"
     HelpText:
-      DE: "Name der Variablen, in der die angeforderten Daten gespeichert werden"
+      DE: "Name der Variable, in der die angeforderten Daten gespeichert werden"
       EN: "Name of the variable that stores the requested data"
     Default: "Request data"

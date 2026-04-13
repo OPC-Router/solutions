@@ -16,8 +16,8 @@ Parameters:
       DE: "Siemens S7 OPC UA Client Name"
       EN: "Siemens S7 OPC UA Client name"
     HelpText:
-      DE: "Eindeutiger Name für die Siemens S7 Instanz"
-      EN: "Unique name for the Siemens S7 instance"
+      DE: "Eindeutiger Name für die Siemens S7 OPC UA Client Instanz"
+      EN: "Unique name for the Siemens S7 OPC UA Client instance"
     Default: "Siemens S7"
   siemens_s7_mssql_instance_name:
     Type: "FileName"

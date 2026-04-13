@@ -23,7 +23,7 @@ TransferObjects:
         - inray.OPCRouter.RestPlugIn.Shared.Config.RestParameterItem, inray.OPCRouter4.RestPlugIn
       Name: HttpHeader
     GroupType: 18003
-    Name: Request-Parameter
+    Name: Request parameters
   - GroupType: 18004
     Name: Response-Headers
   - GroupType: 18006
@@ -89,7 +89,7 @@ TransferObjects:
     - Direction: input
       LocalId: 244601728
       Name: Token
-    Name: Variablen
+    Name: Variables
   - GroupType: 1051
     Items:
     - Direction: output

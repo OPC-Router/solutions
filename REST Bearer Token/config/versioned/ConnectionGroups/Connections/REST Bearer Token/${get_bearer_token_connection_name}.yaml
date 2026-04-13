@@ -13,7 +13,7 @@ TransferObjects:
   - GroupType: 18005
     Name: Rest-Host
   - GroupType: 18003
-    Name: Request-Parameter
+    Name: Request parameters
   - GroupType: 18004
     Name: Response-Headers
   - GroupType: 18006

@@ -15,8 +15,8 @@ Parameters:
       DE: "S7 OPC UA Client Name"
       EN: "S7 OPC UA Client name"
     HelpText:
-      DE: "Eindeutiger Name für die S7 Instanz"
-      EN: "Unique name for the S7 instance"
+      DE: "Eindeutiger Name für die S7 OPC UA Client Instanz"
+      EN: "Unique name for the S7 OPC UA Client instance"
     Default: "S7 Client"
   opc_client_endpoint:
     Type: "String"

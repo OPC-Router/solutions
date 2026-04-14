@@ -26,6 +26,8 @@ These ensure that all Solutions remain consistent, discoverable, and usable with
 
 A maintainer will review your submission and may request adjustments.
 
+A guide on how to create your own Solutions can be found in the [Documentation](https://docs.opc-router.com/solution_gallery/create/).
+
 ---
 
 ## 📐 Contribution Rules

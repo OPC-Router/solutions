@@ -1,3 +1,21 @@
+<div align="center">
+  <a href="https://opc-router.com">
+    <img src="img/opc_router_logo.png" alt="Logo" >
+  </a>
+  <br />
+  <br />
+  <h1 align="center">OPC Router Solutions</h1>
+  <p align="center">
+    Curated, ready-to-use OPC Router connections and templates for common industrial connectivity scenarios. Accelerate implementation with production-ready examples, reusable patterns, and best-practice configurations.
+    <br />
+    <a href="https://opc-router.com/"><strong>OPC Router</strong></a>
+    -
+    <a href="https://www.opc-router.com/contact-and-support/"><strong>Contact</strong></a>
+    <br />
+    <br />
+  </p>
+</div>
+
 # 📦 Solutions
 
 ## Overview  

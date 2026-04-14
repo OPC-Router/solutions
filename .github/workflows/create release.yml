@@ -23,7 +23,7 @@ jobs:
       - name: Create ZIP without .git and .github
         run: |
           zip -r solutions.zip . \
-            -x ".git/*" ".github/*"
+            -x ".git/*" ".github/*" "img/*"
 
       - name: Create or update release
         uses: softprops/action-gh-release@v1

@@ -8,9 +8,9 @@
   <p align="center">
     Curated, ready-to-use OPC Router connections and templates for common industrial connectivity scenarios. Accelerate implementation with production-ready examples, reusable patterns, and best-practice configurations.
     <br />
-    <a href="https://opc-router.com/"><strong>OPC Router</strong></a>
+    <a href="https://opc-router.com/?utm_source=GitHub&utm_medium=Solutions&utm_campaign=OpcRouterSolutions"><strong>OPC Router</strong></a>
     -
-    <a href="https://www.opc-router.com/contact-and-support/"><strong>Contact</strong></a>
+    <a href="https://www.opc-router.com/contact-and-support/?utm_source=GitHub&utm_medium=Solutions&utm_campaign=OpcRouterSolutions"><strong>Contact</strong></a>
     <br />
     <br />
   </p>

@@ -3,7 +3,7 @@ Diese Solution enthält ein für die Anbindung einer Siemens S7 Steuerung optimi
 Für die Verbindung mit einer S7 Steuerung wurden im Plug-in folgende Maßnahmen getroffen:
 
 * Der OPC UA Client benutzt ein Clientzertifikat
-* Der Lesemodus wurde auf Browse Path umgestellt
+* Der Lesemodus wurde auf Node-ID umgestellt
 
 ##### Hinweis
 

@@ -12,12 +12,12 @@ Parameters:
   S7_instance_name:
     Type: "FileName"
     Label:
-      DE: "S7 OPC UA Client Name"
-      EN: "S7 OPC UA Client name"
+      DE: "Siemens S7 OPC UA Client Name"
+      EN: "Siemens S7 OPC UA Client name"
     HelpText:
-      DE: "Eindeutiger Name für die S7 OPC UA Client Instanz"
-      EN: "Unique name for the S7 OPC UA Client instance"
-    Default: "S7 Client"
+      DE: "Eindeutiger Name für die Siemens S7 OPC UA Client Instanz"
+      EN: "Unique name for the Siemens S7 OPC UA Client instance"
+    Default: "Siemens S7 Client"
   opc_client_endpoint:
     Type: "String"
     Label:

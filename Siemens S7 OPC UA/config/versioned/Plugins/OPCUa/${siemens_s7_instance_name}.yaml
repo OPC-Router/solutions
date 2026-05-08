@@ -11,7 +11,7 @@ DatachangeV2AsyncQueueLimit: 100
 Endpoint: "${opc_client_endpoint}"
 GroupManagerTypeEnum: V2
 Id: 2605071511-370157507-9F0141E7-0002FDEA
-InstanceName: ${S7_instance_name}
+InstanceName: ${siemens_s7_instance_name}
 ItemIdentification: NodeId
 OpcReadMode: ForceSyncRead
 PlugInTypeID: 3100

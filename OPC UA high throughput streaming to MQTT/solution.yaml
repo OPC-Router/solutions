@@ -67,11 +67,11 @@ Parameters:
   mdc_to_mqtt_connection_name:
     Type: "FileName"
     Label:
-      DE: "Verbindungsname"
-      EN: "Connection name"
+      DE: "Flow-Name"
+      EN: "Flow name"
     HelpText:
-      DE: "Name der Verbindung, die für das Senden von Daten an MQTT verwendet wird"
-      EN: "Name of the connection used for sending data to MQTT"
+      DE: "Name des Flows, der für das Senden von Daten an MQTT verwendet wird"
+      EN: "Name of the flow used for sending data to MQTT"
     Default: "Multi Datachange Trigger to MQTT"
   mdc_trigger_path:
     Type: "String"

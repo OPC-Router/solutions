@@ -26,11 +26,11 @@ Parameters:
   get_bearer_token_connection_name:
     Type: "FileName"
     Label:
-      DE: "Bearer Token Verbindungsname"
-      EN: "Bearer token connection name"
+      DE: "Bearer Token Flow-Name"
+      EN: "Bearer token flow name"
     HelpText:
-      DE: "Name der Verbindung zum Abrufen des Bearer Tokens"
-      EN: "Name of the connection used to retrieve the Bearer token"
+      DE: "Name des Flows zum Abrufen des Bearer Tokens"
+      EN: "Name of the flow used to retrieve the Bearer token"
     Default: "Get Bearer Token"
   rest_bearer_to_url:
     Type: "String"
@@ -51,11 +51,11 @@ Parameters:
   request_with_bearer_token_connection_name:
     Type: "FileName"
     Label:
-      DE: "Datenanfrage Verbindungsname"
-      EN: "Data request connection name"
+      DE: "Datenanfrage Flow-Name"
+      EN: "Data request flow name"
     HelpText:
-      DE: "Name der Verbindung für die Anfrage mit Bearer Token"
-      EN: "Name of the connection used for the request with Bearer Token"
+      DE: "Name des Flows für die Anfrage mit Bearer Token"
+      EN: "Name of the flow used for the request with Bearer Token"
     Default: "Make REST request with Bearer Token"
   rest_data_request_to_url:
     Type: "String"

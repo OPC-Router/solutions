@@ -36,11 +36,11 @@ Parameters:
   slack_notifications_connection_name:
     Type: "FileName"
     Label:
-      DE: "Verbindungsname"
-      EN: "Connection name"
+      DE: "Flow-Name"
+      EN: "Flow name"
     HelpText:
-      DE: "Name der Verbindung, die für das Senden von Benachrichtigungen an Slack verwendet wird."
-      EN: "Name of the connection used for sending notifications to Slack."
+      DE: "Name des Flows, der für das Senden von Benachrichtigungen an Slack verwendet wird."
+      EN: "Name of the flow used for sending notifications to Slack."
     Default: "Send Slack notification"
   slack_notification_text:
     Type: "String"

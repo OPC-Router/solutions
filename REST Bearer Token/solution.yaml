@@ -27,10 +27,10 @@ Parameters:
     Type: "FileName"
     Label:
       DE: "Bearer Token Flow-Name"
-      EN: "Bearer token flow name"
+      EN: "Bearer token Flow name"
     HelpText:
       DE: "Name des Flows zum Abrufen des Bearer Tokens"
-      EN: "Name of the flow used to retrieve the Bearer token"
+      EN: "Name of the Flow used to retrieve the Bearer token"
     Default: "Get Bearer Token"
   rest_bearer_to_url:
     Type: "String"
@@ -52,10 +52,10 @@ Parameters:
     Type: "FileName"
     Label:
       DE: "Datenanfrage Flow-Name"
-      EN: "Data request flow name"
+      EN: "Data request Flow name"
     HelpText:
       DE: "Name des Flows für die Anfrage mit Bearer Token"
-      EN: "Name of the flow used for the request with Bearer Token"
+      EN: "Name of the Flow used for the request with Bearer Token"
     Default: "Make REST request with Bearer Token"
   rest_data_request_to_url:
     Type: "String"

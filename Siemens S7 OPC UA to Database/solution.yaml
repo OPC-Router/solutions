@@ -43,7 +43,7 @@ Parameters:
       EN: "Flow name"
     HelpText:
       DE: "Name des Flows, mit dem die Daten in die Datenbank geschrieben werden."
-      EN: "Name of the flow that writes the data to the database."
+      EN: "Name of the Flow that writes the data to the database."
     Default: "OPC to Database"
   MSSQL_Server:
     Type: "String"

@@ -40,7 +40,7 @@ Parameters:
       EN: "Flow name"
     HelpText:
       DE: "Name des Flows, der für das Senden von Benachrichtigungen an Slack verwendet wird."
-      EN: "Name of the flow used for sending notifications to Slack."
+      EN: "Name of the Flow used for sending notifications to Slack."
     Default: "Send Slack notification"
   slack_notification_text:
     Type: "String"

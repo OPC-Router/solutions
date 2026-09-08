@@ -9,4 +9,4 @@ Diese Solution enthält ein für den **Multi Datachange Trigger** optimiertes **
 * InfluxDB
   * Es werden gestapelte/asynchrone Inserts verwendet.
 
-Die enthaltene Verbindung realisiert die Übertragung der Daten aus dem Multi Datachange Trigger an eine InfluxDB.
+Der enthaltene Flow realisiert die Übertragung der Daten aus dem Multi Datachange Trigger an eine InfluxDB.

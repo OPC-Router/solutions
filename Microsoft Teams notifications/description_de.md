@@ -1,5 +1,5 @@
 Mit dieser Solution können Sie über einen Workflow in Teams eine einfache Textbenachrichtigung als dynamische Karte an Microsoft Teams versenden.  
-Das Senden eines dynamischen Textes kann in der Verbindung konfiguriert werden. Auch das Ändern der Karte ist durch das Anpassen des JSON Schreiben Transferobjektes einfach möglich.
+Das Senden eines dynamischen Textes kann im Flow konfiguriert werden. Auch das Ändern der Karte ist durch das Anpassen des JSON Schreiben Transferobjektes einfach möglich.
 
 ##### Voraussetzungen für das Verwenden dieser Solution
 

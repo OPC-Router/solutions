@@ -39,10 +39,10 @@ Parameters:
     Type: "FileName"
     Label:
       DE: "Teams Benachrichtigungen Flow-Name"
-      EN: "Teams notifications flow name"
+      EN: "Teams notifications Flow name"
     HelpText:
       DE: "Name des Flows, der für das Senden von Benachrichtigungen an Microsoft Teams verwendet wird."
-      EN: "Name of the flow used for sending notifications to Microsoft Teams."
+      EN: "Name of the Flow used for sending notifications to Microsoft Teams."
     Default: "Send Microsoft Teams notification"
   teams_notification_text:
     Type: "String"

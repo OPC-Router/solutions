@@ -7,4 +7,4 @@ Diese Solution enthält ein für den **Multi Datachange Trigger** optimiertes **
 * Multi Datachange Trigger
   * Aktualisierung der Items wurde deaktiviert.
 
-Die enthaltene Verbindung realisiert die Übertragung der Daten aus dem Multi Datachange Trigger an einen MQTT Broker.
+Der enthaltene Flow realisiert die Übertragung der Daten aus dem Multi Datachange Trigger an einen MQTT Broker.

@@ -1,5 +1,5 @@
 With this Solution, you can send a simple text notification as a dynamic card to Microsoft Teams via a Workflow in Teams.  
-Sending a dynamic text can be configured in the connection. Changing the card is also easy by customizing the JSON Write Transfer Object.
+Sending a dynamic text can be configured in the Flow. Changing the card is also easy by customizing the JSON Write Transfer Object.
 
 ##### Requirements for using this solution
 

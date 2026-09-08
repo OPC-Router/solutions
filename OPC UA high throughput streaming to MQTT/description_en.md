@@ -7,4 +7,4 @@ This Solution contains an **OPC UA client plug-in** optimized for the **Multi Da
 * Multi Datachange Trigger
   * Updating of items has been disabled.
 
-The included connection transfers data from the Multi Datachange Trigger to an MQTT broker.
+The included Flow transfers data from the Multi Datachange Trigger to an MQTT broker.

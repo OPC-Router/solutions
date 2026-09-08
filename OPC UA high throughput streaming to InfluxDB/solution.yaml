@@ -85,7 +85,7 @@ Parameters:
       EN: "Flow name"
     HelpText:
       DE: "Name des Flows, der für das Senden von Daten an InfluxDB verwendet wird"
-      EN: "Name of the flow used for sending data to InfluxDB"
+      EN: "Name of the Flow used for sending data to InfluxDB"
     Default: "Multi Datachange Trigger to Influx"
   mdc_trigger_path:
     Type: "String"

@@ -1,5 +1,5 @@
 With this Solution, you can send notifications to Slack via an incoming webhook.
-Sending dynamic text can be configured in the connection settings. You can also customize the message's design by modifying the JSON document in the JSON write transfer object.
+Sending dynamic text can be configured in the Flow settings. You can also customize the message's design by modifying the JSON document in the JSON write transfer object.
 
 ##### Prerequisites for using this Solution
 

@@ -47,7 +47,7 @@ A guide on how to create your own Solutions can be found in the [documentation](
 
 ### General Requirements
 
-- No deactivated or unused connections may be present  
+- No deactivated or unused Flows may be present  
 - No unused plug-ins may be present  
 - Icons must have sufficient resolution (minimum **512×512 px**) or be provided in **SVG format**
 

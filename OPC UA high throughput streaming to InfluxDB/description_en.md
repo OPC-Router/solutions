@@ -9,4 +9,4 @@ This Solution includes an **OPC UA client plug-in** optimized for the **Multi Da
 * InfluxDB
   * Stacked/asynchronous inserts are used.
 
-The included connection transfers data from the Multi Datachange Trigger to an InfluxDB.
+The included Flow transfers data from the Multi Datachange Trigger to an InfluxDB.

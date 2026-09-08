@@ -1,6 +1,6 @@
 Diese Solution enthält einen einfachen Aufbau für das Anfragen und Verwenden eines Bearer Tokens für die Authentifizierung mit dem REST Transferobjekt.
 
-Der Aufbau besteht aus zwei Verbindungen. Mit einer Verbindung wird der Bearer Token angefordert und in eine Variable gespeichert. Die andere Verbindung verwendet den gespeicherten Bearer Token für die Bearer Token Authentifizierung.
+Der Aufbau besteht aus zwei Flows. Mit einem Flow wird der Bearer Token angefordert und in eine Variable gespeichert. Der andere Flow verwendet den gespeicherten Bearer Token für die Bearer Token Authentifizierung.
 
 ##### Hinweis
 

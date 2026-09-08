@@ -1,5 +1,5 @@
 Mit dieser Solution können Sie über einen Incoming Webhook Benachrichtigungen an Slack senden.
-Das Senden eines dynamischen Textes kann in der Verbindung konfiguriert werden. Auch ein Ändern des Designs von der Nachricht ist durch das Anpassen des JSON Dokuments im JSON Schreiben Transferobjekt möglich.
+Das Senden eines dynamischen Textes kann im Flow konfiguriert werden. Auch ein Ändern des Designs von der Nachricht ist durch das Anpassen des JSON Dokuments im JSON Schreiben Transferobjekt möglich.
 
 ##### Voraussetzungen für das Verwenden dieser Solution
 

@@ -6,7 +6,7 @@
   <br />
   <h1 align="center">OPC Router Solutions</h1>
   <p align="center">
-    Curated, ready-to-use OPC Router connections and templates for common industrial connectivity scenarios. Accelerate implementation with production-ready examples, reusable patterns, and best-practice configurations.
+    Curated, ready-to-use OPC Router Flows and templates for common industrial connectivity scenarios. Accelerate implementation with production-ready examples, reusable patterns, and best-practice configurations.
     <br />
     <a href="https://opc-router.com/?utm_source=GitHub&utm_medium=Solutions&utm_campaign=OpcRouterSolutions"><strong>OPC Router</strong></a>
     -
@@ -45,7 +45,7 @@ A **Solution** consists of:
 
 Solutions can include:
 
-- Connections  
+- Flows  
 - Plug-in configurations  
 - Settings for the OPC Router or connubes
 - And more

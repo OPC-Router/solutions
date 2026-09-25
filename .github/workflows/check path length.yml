@@ -1,0 +1,22 @@
+name: Check path length
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-path-length:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check that all paths fit the Windows path length limit
+        run: bash .github/scripts/check-path-length.sh

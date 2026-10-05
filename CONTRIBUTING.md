@@ -38,6 +38,7 @@ A guide on how to create your own Solutions can be found in the [documentation](
 - The **configuration files must be located in a `config` subdirectory**, mirroring the structure used by the products
   - For reference you can take a look at the Solutions in this Repository
 - Each Solution must include a `solution.yaml` file
+- File paths from the repository root (for example, `My Solution/config/versioned/...`) must be **170 characters or fewer**. Longer paths cannot be installed because Solutions are deployed under a deep Windows directory. CI enforces this limit.
 
 ### Metadata and Parameter Requirements
 

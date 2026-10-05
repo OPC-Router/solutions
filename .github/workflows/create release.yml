@@ -20,6 +20,9 @@ jobs:
         with:
           ref: main
 
+      - name: Check that all paths fit the Windows path length limit
+        run: bash .github/scripts/check-path-length.sh
+
       - name: Create ZIP without .git and .github
         run: |
           zip -r solutions.zip . \

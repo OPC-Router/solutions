@@ -1,14 +1,17 @@
 <div align="center">
   <a href="https://opc-router.com/?utm_source=GitHub&utm_medium=Solutions&utm_campaign=OpcRouterSolutions">
-    <img src="img/opc_router_logo.png" alt="Logo" >
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="img/opc_router_logo_dark.svg">
+      <img src="img/opc_router_logo.svg" alt="connubes OPC Router" width="420">
+    </picture>
   </a>
   <br />
   <br />
-  <h1 align="center">OPC Router Solutions</h1>
+  <h1 align="center">connubes OPC Router Solutions</h1>
   <p align="center">
-    Curated, ready-to-use OPC Router Flows and templates for common industrial connectivity scenarios. Accelerate implementation with production-ready examples, reusable patterns, and best-practice configurations.
+    Curated, ready-to-use connubes OPC Router Flows and templates for common industrial connectivity scenarios. Accelerate implementation with production-ready examples, reusable patterns, and best-practice configurations.
     <br />
-    <a href="https://opc-router.com/?utm_source=GitHub&utm_medium=Solutions&utm_campaign=OpcRouterSolutions"><strong>OPC Router</strong></a>
+    <a href="https://opc-router.com/?utm_source=GitHub&utm_medium=Solutions&utm_campaign=OpcRouterSolutions"><strong>connubes OPC Router</strong></a>
     -
     <a href="https://www.opc-router.com/contact-and-support/?utm_source=GitHub&utm_medium=Solutions&utm_campaign=OpcRouterSolutions"><strong>Contact</strong></a>
     <br />
@@ -20,9 +23,9 @@
 
 ## Overview  
 
-This repository contains **Solutions** designed for use with the **OPC Router** and **connubes**.  
-A **Solution** is a pre‑structured full or partial project for the OPC Router and connubes that includes configurable parameters.  
-These parameters allow you to tailor the Solution to your specific environment before importing it into OPC Router or connubes.
+This repository contains **Solutions** designed for use with **connubes OPC Router**.  
+A **Solution** is a pre‑structured full or partial project for connubes OPC Router that includes configurable parameters.  
+These parameters allow you to tailor the Solution to your specific environment before importing it into connubes OPC Router.
 
 Solutions help you:
 
@@ -32,7 +35,7 @@ Solutions help you:
 - Reuse proven templates with flexible parameterization
 
 Solutions are not intended to be consumed directly from this GitHub repository.  
-This repository is a predefined source of Solutions for the OPC Router and connubes. The Solutions from this repository are offered in the Solution Gallery UI by default.
+This repository is a predefined source of Solutions for connubes OPC Router. The Solutions from this repository are offered in the Solution Gallery UI by default.
 
 ---
 
@@ -47,5 +50,5 @@ Solutions can include:
 
 - Flows  
 - Plug-in configurations  
-- Settings for the OPC Router or connubes
+- Settings for connubes OPC Router
 - And more

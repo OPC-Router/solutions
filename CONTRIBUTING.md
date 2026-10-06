@@ -1,7 +1,7 @@
 # 🤝 Contributing to the Solutions Repository
 
 Thank you for your interest in contributing!  
-We warmly welcome community contributions to help grow and improve this collection of **Solutions** for the OPC Router and connubes.
+We warmly welcome community contributions to help grow and improve this collection of **Solutions** for connubes OPC Router.
 
 This repository exists so that users and partners can share reusable, well‑structured Solutions that others can benefit from.  
 Whether you're contributing a small fix, a new Solution, or improvements to documentation — your help is appreciated.

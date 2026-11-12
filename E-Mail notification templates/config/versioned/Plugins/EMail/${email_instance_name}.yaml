@@ -1,0 +1,17 @@
+AnonLogIn: ${smtp_anonymous}
+AuthFlow: BasicAuth
+Id: 2609030001-100000001-E5A1B2C3-00000001
+InstanceName: '${email_instance_name}'
+MailProvider: Custom
+PasswordKey: ${smtp_password_key}
+PlugInTypeID: 4000
+Port: ${smtp_port}
+SSL: false
+SenderAddress: "${sender_address}"
+SenderDisplayName: "${sender_display_name}"
+Server: "${smtp_host}"
+SmtpSecureSocketOptions: ${smtp_security}
+StartMode: AlwaysOn
+UserName: "${smtp_username}"
+_clrType:
+- inray.OPCRouter.EMailPlugIn.Config.EMailPlugInConfig, inray.OPCRouter4.EMailPlugIn

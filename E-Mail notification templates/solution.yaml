@@ -1,0 +1,271 @@
+FormatVersion: 1
+CompatibleVersionRange: ">=5.7"
+Tags:
+  - Notifications
+  - OPC
+IconFile: "email-notifications.svg"
+DisplayName:
+  DE: "E-Mail-Benachrichtigungen mit HTML-Vorlagen"
+  EN: "E-mail notifications with HTML templates"
+ShortDescription:
+  DE: "HTML-formatierte Alarm- und Schichtberichts-Mails als wiederverwendbare Funktionen (FX)"
+  EN: "HTML-formatted alarm and shift-report e-mails as reusable functions (FX)"
+ParameterReplacementFileRegex: ".*\\.yaml"
+Parameters:
+  email_instance_name:
+    Type: "FileName"
+    Label:
+      DE: "Name der E-Mail-Anbindung"
+      EN: "E-mail plug-in instance name"
+    HelpText:
+      DE: "Eindeutiger Name der SMTP-Anbindung, die die Solution anlegt."
+      EN: "Unique name of the SMTP plug-in instance the solution creates."
+    Default: "Notification SMTP"
+  smtp_host:
+    Type: "String"
+    Label:
+      DE: "SMTP-Host"
+      EN: "SMTP host"
+    HelpText:
+      DE: "Hostname oder IP-Adresse des SMTP-Servers."
+      EN: "Host name or IP address of the SMTP server."
+  smtp_port:
+    Type: "Integer"
+    Label:
+      DE: "SMTP-Port"
+      EN: "SMTP port"
+    HelpText:
+      DE: "Port des SMTP-Servers. Übliche Werte: 25 oder 587 unverschlüsselt/STARTTLS, 465 für implizites TLS (SslOnConnect)."
+      EN: "Port of the SMTP server. Common values: 25 or 587 for plain/STARTTLS, 465 for implicit TLS (SslOnConnect)."
+    Default: 25
+    Min: 1
+    Max: 65535
+  smtp_security:
+    Type: "Dropdown"
+    Label:
+      DE: "Transportverschlüsselung"
+      EN: "Transport security"
+    HelpText:
+      DE: "None = unverschlüsselt (zum Beispiel internes Relay ohne TLS). StartTls, SslOnConnect und Auto erzwingen Verschlüsselung: endet die Verbindung im Klartext, schlägt der Versand mit einer Meldung fehl. STARTTLS when available nutzt STARTTLS nur, wenn der Server es anbietet, und sendet sonst **unverschlüsselt weiter, ohne Fehler**."
+      EN: "None = plain (for example an internal relay without TLS). StartTls, SslOnConnect and Auto enforce encryption: if the connection ends up in the clear, sending fails with a message. STARTTLS when available uses STARTTLS only if the server offers it and otherwise **keeps sending unencrypted, without an error**."
+    Items:
+      - Value: "Auto"
+        DisplayText:
+          DE: "Auto"
+          EN: "Auto"
+      - Value: "None"
+        DisplayText:
+          DE: "None"
+          EN: "None"
+      - Value: "StartTls"
+        DisplayText:
+          DE: "STARTTLS"
+          EN: "STARTTLS"
+      - Value: "StartTlsWhenAvailable"
+        DisplayText:
+          DE: "STARTTLS (Optional)"
+          EN: "STARTTLS (Optional)"
+      - Value: "SslOnConnect"
+        DisplayText:
+          DE: "SSL/TLS"
+          EN: "SSL/TLS"
+    Default: "None"
+  smtp_anonymous:
+    Type: "Boolean"
+    Label:
+      DE: "Ohne Anmeldung senden"
+      EN: "Send without authentication"
+    HelpText:
+      DE: "Aktiv bei Mailrelays ohne Login. Deaktivieren und Benutzername/Passwort angeben, wenn der Server eine Anmeldung verlangt."
+      EN: "Enable for relays without login. Disable and provide user name and password when the server requires authentication."
+    Default: true
+  smtp_username:
+    Type: "String"
+    Required: false
+    Label:
+      DE: "SMTP-Benutzername"
+      EN: "SMTP user name"
+    HelpText:
+      DE: "Benutzername für die Anmeldung am SMTP-Server. Nur erforderlich, wenn „Ohne Anmeldung senden“ deaktiviert ist."
+      EN: "User name for authenticating with the SMTP server. Only required when \"Send without authentication\" is disabled."
+    Default: ""
+  smtp_password_key:
+    Type: "SecretKey"
+    Required: false
+    Label:
+      DE: "SMTP-Passwort (Secret)"
+      EN: "SMTP password (secret)"
+    HelpText:
+      DE: "Secret aus dem Secret Store mit dem SMTP-Passwort. Leer lassen, wenn ohne Anmeldung gesendet wird."
+      EN: "Secret from the secret store holding the SMTP password. Leave empty when sending without authentication."
+  sender_address:
+    Type: "String"
+    Label:
+      DE: "Absenderadresse"
+      EN: "Sender address"
+    HelpText:
+      DE: "Absender-E-Mail-Adresse, die in den gesendeten Mails erscheint (SenderAddress der SMTP-Anbindung und Absender der Vorlagen)."
+      EN: "Sender e-mail address shown in the mails that are sent (SenderAddress of the SMTP plug-in instance and the sender of the templates)."
+  sender_display_name:
+    Type: "String"
+    Label:
+      DE: "Absendername"
+      EN: "Sender display name"
+    HelpText:
+      DE: "Anzeigename des Absenders in den gesendeten Mails (SenderDisplayName der SMTP-Anbindung und Absendername der Vorlagen)."
+      EN: "Display name of the sender shown in the mails that are sent (SenderDisplayName of the SMTP plug-in instance and the sender name of the templates)."
+    Default: "OPC Router"
+  notification_recipient:
+    Type: "String"
+    Label:
+      DE: "Empfänger"
+      EN: "Recipient"
+    HelpText:
+      DE: "E-Mail-Adresse, an die die Beispiel-Flows senden. Mehrere Adressen durch Semikolon trennen."
+      EN: "E-mail address the sample flows send to. Separate several addresses with semicolons."
+  fx_alarm_name:
+    Type: "FileName"
+    Label:
+      DE: "Alarm-Mail-Funktion-Name"
+      EN: "Alarm mail function name"
+    HelpText:
+      DE: "Name der Funktion (FX), die eine Alarm-/Statuskarte als HTML-Mail versendet."
+      EN: "Name of the function (FX) that sends an alarm/status card as HTML mail."
+    Default: "Send alarm mail (HTML)"
+  fx_report_name:
+    Type: "FileName"
+    Label:
+      DE: "Schichtbericht-Mail-Funktion-Name"
+      EN: "Shift report mail function name"
+    HelpText:
+      DE: "Name der Funktion (FX), die aus Zählerständen einen Schichtbericht mit OEE-Kennzahlen als HTML-Mail versendet."
+      EN: "Name of the function (FX) that turns counters into a shift report with OEE figures and sends it as HTML mail."
+    Default: "Send shift report mail (HTML)"
+  flow_alarm_name:
+    Type: "FileName"
+    Label:
+      DE: "Alarm-Flow-Name"
+      EN: "Alarm flow name"
+    HelpText:
+      DE: "Name des Beispiel-Flows, der bei einer Wertänderung des Alarm-Knotens die Alarm-Mail auslöst. Muss im Projekt eindeutig sein."
+      EN: "Name of the sample flow that sends the alarm mail on a value change of the alarm node. Must be unique in the project."
+    Default: "Sample - alarm mail from OPC UA"
+  flow_report_name:
+    Type: "FileName"
+    Label:
+      DE: "Schichtbericht-Flow-Name"
+      EN: "Shift report flow name"
+    HelpText:
+      DE: "Name des Beispiel-Flows, der nach Zeitplan die Zählerstände liest und den Schichtbericht per Mail versendet. Muss im Projekt eindeutig sein."
+      EN: "Name of the sample flow that reads the counters on schedule and sends the shift report by mail. Must be unique in the project."
+    Default: "Sample - shift report mail"
+  opc_ua_instance_name:
+    Type: "FileName"
+    Label:
+      DE: "Name der OPC-UA-Anbindung"
+      EN: "OPC UA plug-in instance name"
+    HelpText:
+      DE: "Eindeutiger Name der OPC-UA-Anbindung, die die Solution anlegt und aus der die Beispiel-Flows lesen."
+      EN: "Unique name of the OPC UA plug-in instance the solution creates and that the sample flows read from."
+    Default: "Notification OPC UA Client"
+  opc_ua_endpoint:
+    Type: "String"
+    Label:
+      DE: "OPC-UA-Endpunkt"
+      EN: "OPC UA endpoint"
+    HelpText:
+      DE: "Endpunkt des OPC-UA-Servers, aus dem die Beispiel-Flows lesen."
+      EN: "Endpoint of the OPC UA server the sample flows read from."
+    Default: "opc.tcp://localhost:4840"
+  alarm_node_id:
+    Type: "String"
+    Label:
+      DE: "Alarm-Knoten (Browse Path)"
+      EN: "Alarm node (browse path)"
+    HelpText:
+      DE: "OPC-UA-Knoten als Browse Path, dessen Wertänderung eine Alarm-Mail auslöst (z. B. ein Störungsbit). Im Tag-Browser der Anbindung auswählen."
+      EN: "OPC UA node as a browse path whose value change triggers an alarm mail (e.g. a fault bit). Pick it via the plug-in's tag browser."
+    Default: "bp=Objects/2:Machine/2:Fault;"
+  alarm_source_name:
+    Type: "String"
+    Label:
+      DE: "Anzeigename der Quelle"
+      EN: "Source display name"
+    HelpText:
+      DE: "Anzeigename der Quelle in der Alarm-Mail (z. B. Anlage oder Maschine). Keine Anführungszeichen verwenden."
+      EN: "Display name of the source shown in the alarm mail (e.g. a plant or machine). Use no quotation marks."
+    Default: "Line 1 / Press 01"
+  report_cron:
+    Type: "String"
+    Label:
+      DE: "Zeitplan des Schichtberichts (Cron, 7 Felder)"
+      EN: "Shift report schedule (cron, 7 fields)"
+    HelpText:
+      DE: "Quartz-Cron mit Sekunden: Standard 0 0 6 * * ? * = täglich 06:00."
+      EN: "Quartz cron with seconds: default 0 0 6 * * ? * = daily at 06:00."
+    Default: "0 0 6 * * ? *"
+  shift_name:
+    Type: "String"
+    Label:
+      DE: "Schichtname im Bericht"
+      EN: "Shift name in the report"
+    HelpText:
+      DE: "Name der Schicht, der im Schichtbericht angezeigt wird. Keine Anführungszeichen verwenden."
+      EN: "Name of the shift shown in the shift report. Use no quotation marks."
+    Default: "Night shift"
+  line_name:
+    Type: "String"
+    Label:
+      DE: "Linienname im Bericht"
+      EN: "Line name in the report"
+    HelpText:
+      DE: "Name der Linie, der im Schichtbericht angezeigt wird. Keine Anführungszeichen verwenden."
+      EN: "Name of the line shown in the shift report. Use no quotation marks."
+    Default: "Line 1"
+  good_parts_node_id:
+    Type: "String"
+    Label:
+      DE: "Knoten: Gutteile (Browse Path)"
+      EN: "Node: good parts (browse path)"
+    HelpText:
+      DE: "OPC-UA-Knoten als Browse Path für die Anzahl der Gutteile, z. B. bp=Objects/2:Machine/2:GoodParts;. Im Tag-Browser der Anbindung auswählen."
+      EN: "OPC UA node as a browse path for the number of good parts, e.g. bp=Objects/2:Machine/2:GoodParts;. Pick it via the plug-in's tag browser."
+    Default: "bp=Objects/2:Machine/2:GoodParts;"
+  scrap_parts_node_id:
+    Type: "String"
+    Label:
+      DE: "Knoten: Ausschuss (Browse Path)"
+      EN: "Node: scrap parts (browse path)"
+    HelpText:
+      DE: "OPC-UA-Knoten als Browse Path für die Anzahl des Ausschusses, z. B. bp=Objects/2:Machine/2:ScrapParts;. Im Tag-Browser der Anbindung auswählen."
+      EN: "OPC UA node as a browse path for the number of scrap parts, e.g. bp=Objects/2:Machine/2:ScrapParts;. Pick it via the plug-in's tag browser."
+    Default: "bp=Objects/2:Machine/2:ScrapParts;"
+  runtime_minutes_node_id:
+    Type: "String"
+    Label:
+      DE: "Knoten: Laufzeit (Minuten, Browse Path)"
+      EN: "Node: run time (minutes, browse path)"
+    HelpText:
+      DE: "OPC-UA-Knoten als Browse Path für die Laufzeit in Minuten, z. B. bp=Objects/2:Machine/2:RuntimeMinutes;. Im Tag-Browser der Anbindung auswählen."
+      EN: "OPC UA node as a browse path for the run time in minutes, e.g. bp=Objects/2:Machine/2:RuntimeMinutes;. Pick it via the plug-in's tag browser."
+    Default: "bp=Objects/2:Machine/2:RuntimeMinutes;"
+  planned_minutes_node_id:
+    Type: "String"
+    Label:
+      DE: "Knoten: geplante Zeit (Minuten, Browse Path)"
+      EN: "Node: planned time (minutes, browse path)"
+    HelpText:
+      DE: "OPC-UA-Knoten als Browse Path für die geplante Zeit in Minuten, z. B. bp=Objects/2:Machine/2:PlanedMinutes;. Im Tag-Browser der Anbindung auswählen."
+      EN: "OPC UA node as a browse path for the planned time in minutes, e.g. bp=Objects/2:Machine/2:PlanedMinutes;. Pick it via the plug-in's tag browser."
+    Default: "bp=Objects/2:Machine/2:PlanedMinutes;"
+  ideal_cycle_seconds:
+    Type: "Integer"
+    Label:
+      DE: "Ideale Zykluszeit (Sekunden)"
+      EN: "Ideal cycle time (seconds)"
+    HelpText:
+      DE: "Für die Leistungs-Kennzahl: ideale Zeit je Teil."
+      EN: "For the performance figure: ideal time per part."
+    Default: 30
+    Min: 1
+    Max: 86400

@@ -1,0 +1,10 @@
+Id: 4b8d0f2a6c3e4b7d9f1a3b5d7f9b1d64
+InitialValue:
+  Value: '${auth_header_value}'
+  VariantType: System.String, System.Private.CoreLib
+  _clrType:
+  - inray.SDK.Data.YamlSerializer.YamlVariant, inray.SDK.Data
+Name: '${auth_variable_name}'
+VariableType: SecretString
+_clrType:
+- inray.OPCRouter.VariablesPlugIn.Config.Variable, inray.OPCRouter4.VariablesPlugIn

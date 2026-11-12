@@ -1,0 +1,18 @@
+AdvancedProperties:
+  BatchedWrite: true
+  IgnoreContinuationPointZero: false
+  KeepAliveTimeoutOverride: 0
+  MaxNodesPerTranslateBrowsePathOverride: 0
+  ParallelSubscriptions: true
+  UseRegisterNodes: false
+AsyncWrite: true
+Endpoint: "${opc_ua_endpoint}"
+GroupManagerTypeEnum: V2
+Id: 2609030002-100000002-A1B2C3D4-00000002
+InstanceName: '${opc_ua_instance_name}'
+OpcReadMode: PreferAsync
+PlugInTypeID: 3100
+RegisterItemsOnPlugInStart: true
+StartMode: AlwaysOn
+_clrType:
+- inray.OPCRouter.OPCPlugIn.Config.PlugIn.OPCUaPlugInConfig, inray.OPCRouter4.OPCPlugIn

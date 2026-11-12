@@ -1,0 +1,247 @@
+ConnectionLines:
+- ItemStart: 601
+  ItemStop: 302
+- ItemStart: 101
+  ItemStop: 211
+- ItemStart: 102
+  ItemStop: 212
+- ItemStart: 103
+  ItemStop: 213
+- ItemStart: 104
+  ItemStop: 214
+- ItemStart: 105
+  ItemStop: 215
+- ItemStart: 205
+  ItemStop: 301
+- ItemStart: 311
+  ItemStop: 401
+- ItemStart: 402
+  ItemStop: 501
+ConnectionType: Template
+InternalScope:
+  Description: Creates a Jira issue (POST /rest/api/3/issue). Inputs - Summary, Description, Priority, Label1, Label2. Output - IssueKey.
+  InternalCallOnly: true
+  ReusableScopeDefinitionId: b4d6f8a0c2e4416a8b0c2d4e6f8a0b41
+  ScopeRole: FunctionBlockBody
+TransferObjects:
+- Groups:
+  - Items:
+    - Direction: output
+      LocalId: 101
+      Name: Summary
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: output
+      LocalId: 102
+      Name: Description
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: output
+      LocalId: 103
+      Name: Priority
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: output
+      LocalId: 104
+      Name: Label1
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: output
+      LocalId: 105
+      Name: Label2
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    Name: Scope Inputs
+  LocalId: 100
+  PosX: 20
+  PosY: 160
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeInputTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- Groups:
+  - Items:
+    - LocalId: 205
+      Name: Json
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectDocItem, inray.OPCRouter4.BasePlugIn
+    Name: JsonPath Doc
+  - Name: JsonPath Parameters
+  - Items:
+    - Direction: input
+      LocalId: 211
+      Name: summary
+      Value: '$.fields.summary'
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectNodeItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 212
+      Name: description
+      Value: '$.fields.description.content[0].content[0].text'
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectNodeItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 213
+      Name: priority
+      Value: '$.fields.priority.name'
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectNodeItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 214
+      Name: label1
+      Value: '$.fields.labels[0]'
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectNodeItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 215
+      Name: label2
+      Value: '$.fields.labels[1]'
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectNodeItem, inray.OPCRouter4.BasePlugIn
+    Name: JsonPath Items
+  JsonDocument: '{"fields":{"project":{"key":"${jira_project_key}"},"issuetype":{"name":"${jira_issue_type}"},"summary":"","priority":{"name":"High"},"labels":["",""],"description":{"type":"doc","version":1,"content":[{"type":"paragraph","content":[{"type":"text","text":""}]}]}}}'
+  LocalId: 200
+  PlugIn: BasePlugInConfig
+  PosX: 340
+  PosY: 140
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.JSON.JsonWriteTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- Groups:
+  - GroupType: 18005
+    Name: Rest-Host
+    _clrType:
+    - inray.OPCRouter.RestPlugIn.Client.Config.HostItemGroup, inray.OPCRouter4.RestPlugIn
+  - GroupType: 18003
+    Groups:
+    - Items:
+      - Direction: input
+        LocalId: 302
+        Name: Authorization
+        _clrType:
+        - inray.OPCRouter.RestPlugIn.Shared.Config.RestParameterItem, inray.OPCRouter4.RestPlugIn
+      Name: HttpHeader
+    Name: Request parameters
+    _clrType:
+    - inray.OPCRouter.RestPlugIn.Client.Config.RequestItemsGroup, inray.OPCRouter4.RestPlugIn
+  - GroupType: 18004
+    Name: Response-Headers
+    _clrType:
+    - inray.OPCRouter.RestPlugIn.Client.Config.ResponseItemsGroup, inray.OPCRouter4.RestPlugIn
+  - GroupType: 18006
+    Items:
+    - Direction: input
+      LocalId: 301
+      Name: Application/Json
+      ParameterType: RequestBody
+      _clrType:
+      - inray.OPCRouter.RestPlugIn.Shared.Config.RestParameterItem, inray.OPCRouter4.RestPlugIn
+    Name: Request body
+    _clrType:
+    - inray.OPCRouter.RestPlugIn.Client.Config.RequestBodyItemGroup, inray.OPCRouter4.RestPlugIn
+  - GroupType: 18007
+    Items:
+    - Direction: output
+      LocalId: 311
+      Name: Body (Text)
+      ParameterType: ResposeBodyItem
+      _clrType:
+      - inray.OPCRouter.RestPlugIn.Shared.Config.RestParameterItem, inray.OPCRouter4.RestPlugIn
+    - Direction: output
+      LocalId: 312
+      Name: Status code
+      _clrType:
+      - inray.OPCRouter.RestPlugIn.Shared.Config.RestParameterItem, inray.OPCRouter4.RestPlugIn
+    - Direction: output
+      LocalId: 1351867391
+      Name: Status text
+      _clrType:
+      - inray.OPCRouter.RestPlugIn.Shared.Config.RestParameterItem, inray.OPCRouter4.RestPlugIn
+    Name: Response
+    _clrType:
+    - inray.OPCRouter.RestPlugIn.Client.Config.ResponseBodyItemGroup, inray.OPCRouter4.RestPlugIn
+  - GroupType: 18008
+    Name: Request-File-Parameter
+    _clrType:
+    - inray.OPCRouter.RestPlugIn.Client.Config.RequestFileItemsGroup, inray.OPCRouter4.RestPlugIn
+  LocalId: 300
+  Method: Post
+  PlugIn: 2609030004-100000001-D4E5F6A7-00000001
+  PosX: 600
+  PosY: 20
+  RaiseTransferErrorOnErrorResponse: true
+  RequestFormat: application/json
+  URL: /rest/api/3/issue
+  _clrType:
+  - inray.OPCRouter.RestPlugIn.Client.Config.RestTransferObjectConfig, inray.OPCRouter4.RestPlugIn
+- Groups:
+  - Items:
+    - Direction: input
+      LocalId: 401
+      Name: Json
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectDocItem, inray.OPCRouter4.BasePlugIn
+    Name: JsonPath Doc
+  - Name: JsonPath Parameters
+  - Items:
+    - Direction: output
+      LocalId: 402
+      Name: key
+      Value: key
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectNodeItem, inray.OPCRouter4.BasePlugIn
+    Name: JsonPath Items
+  JsonDocument: '{"id":"10001","key":"OPS-1","self":"https://your-site.atlassian.net/rest/api/3/issue/10001"}'
+  LocalId: 400
+  PlugIn: BasePlugInConfig
+  PosX: 900
+  PosY: 180
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.JSON.JsonReadTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- Groups:
+  - Items:
+    - Direction: input
+      LocalId: 501
+      Name: IssueKey
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    Name: Scope Return Values
+  LocalId: 500
+  PosX: 1120
+  PosY: 200
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeReturnTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- Groups:
+  - GroupType: 2
+    Name: Lokale Variablen
+  - GroupType: 1
+    Items:
+    - IsSecretString: true
+      LocalId: 601
+      Name: '${auth_variable_name}'
+      VariableId: 4b8d0f2a6c3e4b7d9f1a3b5d7f9b1d64
+      VariablePath: '${auth_variable_name}'
+      _clrType:
+      - inray.OPCRouter.VariablesPlugIn.Runtime.VariablesTransferObjectItem, inray.OPCRouter4.VariablesPlugIn
+    Name: Globale Variablen
+  - GroupType: 3
+    Name: Kennzahlen
+  LocalId: 600
+  PlugIn: VariablesPlugInConfig
+  PosX: 260
+  PosY: 40
+  _clrType:
+  - inray.OPCRouter.VariablesPlugIn.Config.VariablesTransferObjectConfig, inray.OPCRouter4.VariablesPlugIn
+- GridSnapPixel: 18
+  LocalId: 700002
+  PlugIn: BasePlugInConfig
+  PosX: 140
+  PosY: 360
+  Summary: '<p>You can <strong>edit/extend</strong> the JSON document here</p><p>and expose new inputs on the function contract.</p>'
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.Note.NoteTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- GridSnapPixel: 21
+  LocalId: 700003
+  PlugIn: BasePlugInConfig
+  PosX: 600
+  PosY: 360
+  Summary: '<p>For using <strong>Jira Data Center/Server</strong> instead of Jira Cloud:</p><p>change the URL to /rest/api/2/issue and change the &quot;description&quot; field in </p><p>the JSON document above from the nested Atlassian Document Format </p><p>object to a plain text string – the older Data Center/Server API does not</p><p>understand ADF.</p>'
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.Note.NoteTransferObjectConfig, inray.OPCRouter4.BasePlugIn

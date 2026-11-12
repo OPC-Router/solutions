@@ -1,0 +1,202 @@
+FormatVersion: 1
+CompatibleVersionRange: ">=5.7"
+Tags:
+  - OPC
+  - MDC
+  - MQTT
+IconFile: "uns-isa95.svg"
+DisplayName:
+  DE: "Unified Namespace: OPC UA nach ISA-95-Topics (MQTT)"
+  EN: "Unified Namespace: OPC UA to ISA-95 topics (MQTT)"
+ShortDescription:
+  DE: "OPC-UA-Datenpunkte normalisiert (Wert, Qualität, Zeitstempel) unter enterprise/site/area/line/cell/tag veröffentlichen"
+  EN: "Publish OPC UA data points normalised (value, quality, timestamp) under enterprise/site/area/line/cell/tag"
+ParameterReplacementFileRegex: ".*\\.yaml"
+Parameters:
+  mqtt_instance_name:
+    Type: "FileName"
+    Label:
+      DE: "Name der MQTT-Anbindung"
+      EN: "MQTT plug-in instance name"
+    HelpText:
+      DE: "Eindeutiger Name der MQTT-Anbindung, die die Solution anlegt."
+      EN: "Unique name of the MQTT plug-in instance the solution creates."
+    Default: "UNS MQTT Broker"
+  mqtt_broker_address:
+    Type: "String"
+    Label:
+      DE: "MQTT-Broker (Host)"
+      EN: "MQTT broker (host)"
+    HelpText:
+      DE: "Hostname oder IP-Adresse des MQTT-Brokers, an den die Solution veröffentlicht."
+      EN: "Host name or IP address of the MQTT broker the solution publishes to."
+  mqtt_port:
+    Type: "Integer"
+    Label:
+      DE: "MQTT-Port"
+      EN: "MQTT port"
+    HelpText:
+      DE: "Port des MQTT-Brokers. Übliche Werte: 1883 unverschlüsselt, 8883 mit TLS."
+      EN: "Port of the MQTT broker. Common values: 1883 plain, 8883 with TLS."
+    Default: 1883
+    Min: 1
+    Max: 65535
+  mqtt_protocol:
+    Type: "Dropdown"
+    Label:
+      DE: "MQTT-Protokollversion"
+      EN: "MQTT protocol version"
+    HelpText:
+      DE: "Version, mit der sich die Anbindung beim Broker anmeldet."
+      EN: "Version the plug-in instance uses to connect to the broker."
+    Items:
+      - Value: "V_5"
+        DisplayText: "MQTT 5"
+      - Value: "V3_1_1"
+        DisplayText: "MQTT 3.1.1"
+    Default: "V_5"
+  mqtt_tls:
+    Type: "Boolean"
+    Label:
+      DE: "TLS verwenden"
+      EN: "Use TLS"
+    HelpText:
+      DE: "Aktivieren für Port 8883 / TLS. Zertifikatsvertrauen in der Anbindung prüfen."
+      EN: "Enable for port 8883 / TLS. Check the certificate trust settings of the plug-in instance."
+    Default: false
+  mqtt_client_id:
+    Type: "String"
+    Label:
+      DE: "Client-ID"
+      EN: "Client id"
+    HelpText:
+      DE: "Muss je Instanz eindeutig sein."
+      EN: "Must be unique per instance."
+    Default: "opcrouter-uns"
+  mqtt_username:
+    Type: "String"
+    Required: false
+    Label:
+      DE: "Benutzername"
+      EN: "User name"
+    HelpText:
+      DE: "Benutzername für die Anmeldung am MQTT-Broker. Leer lassen, wenn der Broker anonyme Verbindungen erlaubt."
+      EN: "User name for authenticating with the MQTT broker. Leave empty when the broker accepts anonymous connections."
+    Default: ""
+  mqtt_password_key:
+    Type: "SecretKey"
+    Required: false
+    Label:
+      DE: "Passwort (Secret)"
+      EN: "Password (secret)"
+    HelpText:
+      DE: "Secret aus dem Secret Store mit dem Passwort für die Anmeldung am MQTT-Broker. Leer lassen, wenn der Broker anonyme Verbindungen erlaubt."
+      EN: "Secret from the secret store holding the password for authenticating with the MQTT broker. Leave empty when the broker accepts anonymous connections."
+  uns_enterprise:
+    Type: "String"
+    Label:
+      DE: "ISA-95 Ebene 1: Enterprise"
+      EN: "ISA-95 level 1: enterprise"
+    HelpText:
+      DE: "Bildet die Enterprise-Ebene des Topics <enterprise>/<site>/<area>/<line>/<cell>/<tag>. Der Wert wird Teil eines MQTT-Topics: keine /, + oder #."
+      EN: "Forms the enterprise level of the topic <enterprise>/<site>/<area>/<line>/<cell>/<tag>. The value becomes part of an MQTT topic: no /, + or #."
+    Default: "acme"
+  uns_site:
+    Type: "String"
+    Label:
+      DE: "ISA-95 Ebene 2: Site"
+      EN: "ISA-95 level 2: site"
+    HelpText:
+      DE: "Bildet die Site-Ebene des Topics <enterprise>/<site>/<area>/<line>/<cell>/<tag>. Der Wert wird Teil eines MQTT-Topics: keine /, + oder #."
+      EN: "Forms the site level of the topic <enterprise>/<site>/<area>/<line>/<cell>/<tag>. The value becomes part of an MQTT topic: no /, + or #."
+    Default: "plant1"
+  uns_area:
+    Type: "String"
+    Label:
+      DE: "ISA-95 Ebene 3: Area"
+      EN: "ISA-95 level 3: area"
+    HelpText:
+      DE: "Bildet die Area-Ebene des Topics <enterprise>/<site>/<area>/<line>/<cell>/<tag>. Der Wert wird Teil eines MQTT-Topics: keine /, + oder #."
+      EN: "Forms the area level of the topic <enterprise>/<site>/<area>/<line>/<cell>/<tag>. The value becomes part of an MQTT topic: no /, + or #."
+    Default: "assembly"
+  uns_line:
+    Type: "String"
+    Label:
+      DE: "ISA-95 Ebene 4: Line"
+      EN: "ISA-95 level 4: line"
+    HelpText:
+      DE: "Bildet die Line-Ebene des Topics <enterprise>/<site>/<area>/<line>/<cell>/<tag>. Der Wert wird Teil eines MQTT-Topics: keine /, + oder #."
+      EN: "Forms the line level of the topic <enterprise>/<site>/<area>/<line>/<cell>/<tag>. The value becomes part of an MQTT topic: no /, + or #."
+    Default: "line1"
+  uns_cell:
+    Type: "String"
+    Label:
+      DE: "ISA-95 Ebene 5: Cell / Maschine"
+      EN: "ISA-95 level 5: cell / machine"
+    HelpText:
+      DE: "Bildet die Cell-Ebene des Topics <enterprise>/<site>/<area>/<line>/<cell>/<tag>. Der Wert wird Teil eines MQTT-Topics: keine /, + oder #."
+      EN: "Forms the cell level of the topic <enterprise>/<site>/<area>/<line>/<cell>/<tag>. The value becomes part of an MQTT topic: no /, + or #."
+    Default: "press01"
+  uns_retain:
+    Type: "Boolean"
+    Label:
+      DE: "Nachrichten retained veröffentlichen"
+      EN: "Publish messages retained"
+    HelpText:
+      DE: "Retained: spät hinzukommende Abonnenten sehen sofort den letzten Zustand. Beim Umbenennen einer Ebene bleiben alte Topics im Broker stehen – siehe Beschreibung."
+      EN: "Retained: late subscribers see the last state immediately. When a level is renamed, the old topics stay in the broker - see the description."
+    Default: true
+  fx_publish_name:
+    Type: "FileName"
+    Label:
+      DE: "Publish-Funktion-Name"
+      EN: "Publish function name"
+    HelpText:
+      DE: "Name der Funktion (FX), die aus Ebenen, Tag, Wert, Qualität und Zeitstempel Topic und Payload bildet und veröffentlicht."
+      EN: "Name of the function (FX) that builds topic and payload from levels, tag, value, quality and timestamp and publishes them."
+    Default: "Publish UNS message"
+  flow_subtree_name:
+    Type: "FileName"
+    Label:
+      DE: "Teilbaum-Flow-Name"
+      EN: "Subtree flow name"
+    HelpText:
+      DE: "Name des Beispiel-Flows, der den OPC-UA-Teilbaum überwacht und jeden Datenpunkt über die Funktion in den Unified Namespace veröffentlicht. Muss im Projekt eindeutig sein."
+      EN: "Name of the sample flow that monitors the OPC UA subtree and publishes every data point into the Unified Namespace through the function. Must be unique in the project."
+    Default: "Sample - OPC UA subtree to UNS"
+  opc_ua_instance_name:
+    Type: "FileName"
+    Label:
+      DE: "Name der OPC-UA-Anbindung"
+      EN: "OPC UA plug-in instance name"
+    HelpText:
+      DE: "Eindeutiger Name der OPC-UA-Anbindung, die die Solution anlegt und aus der der Beispiel-Flow liest."
+      EN: "Unique name of the OPC UA plug-in instance the solution creates and that the sample flow reads from."
+    Default: "UNS OPC UA Client"
+  opc_ua_endpoint:
+    Type: "String"
+    Label:
+      DE: "OPC-UA-Endpunkt"
+      EN: "OPC UA endpoint"
+    HelpText:
+      DE: "Endpunkt des OPC-UA-Servers, aus dem der Beispiel-Flow den Wurzelpfad liest."
+      EN: "Endpoint of the OPC UA server the sample flow reads the root path from."
+    Default: "opc.tcp://localhost:4840"
+  opc_root_path:
+    Type: "String"
+    Label:
+      DE: "Wurzelpfad der überwachten Datenpunkte"
+      EN: "Root path of the monitored data points"
+    HelpText:
+      DE: "Browse Path, unter dem alle Variablen rekursiv überwacht werden, z. B. bp=Objects/2:Machine; (Browse-Path-Syntax des OPC-UA-Plug-ins: Ebenen mit / getrennt, abschließendes ;). Einen Maschinen-Teilbaum wählen, nicht die Wurzel: Variablen mit Array-Werten (z. B. unter Objects/Server) lassen die Veröffentlichung des Stapels scheitern."
+      EN: "Browse path under which all variables are monitored recursively, e.g. bp=Objects/2:Machine; (OPC UA plug-in browse path syntax: levels separated by /, trailing ;). Choose a machine subtree, not the root: array-valued variables (e.g. below Objects/Server) make the batch fail."
+    Default: "bp=Objects/2:Machine;"
+  refresh_items:
+    Type: "Boolean"
+    Label:
+      DE: "Überwachte Items zyklisch aktualisieren"
+      EN: "Refresh monitored items cyclically"
+    HelpText:
+      DE: "Nur aktivieren, wenn sich der Adressraum zur Laufzeit ändert."
+      EN: "Enable only when the address space changes at run time."
+    Default: false

@@ -1,0 +1,184 @@
+ConnectionLines:
+- ItemStart: 1974042283
+  ItemStop: 103
+- ItemStart: 496589921
+  ItemStop: 104
+- ItemStart: 1555781968
+  ItemStop: 105
+- ItemStart: 129069833
+  ItemStop: 106
+- ItemStart: 901
+  ItemStop: 101
+- ItemStart: 902
+  ItemStop: 102
+- ItemStart: 903
+  ItemStop: 107
+- ItemStart: 904
+  ItemStop: 108
+PublishedUtcTimestamp: '0001-01-01T00:00:00.0000000Z'
+TransferObjects:
+- Expression: '${report_cron}'
+  LocalId: 10
+  PlugIn: BasePlugInConfig
+  PosX: 20
+  PosY: 20
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.Cron.CronTriggerConfig, inray.OPCRouter4.BasePlugIn
+- Groups:
+  - Items:
+    - ForceType: Standard
+      LocalId: 1974042283
+      Name: '${good_parts_node_id}'
+      OPCAddress: '${good_parts_node_id}'
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - ForceType: Standard
+      LocalId: 496589921
+      Name: '${scrap_parts_node_id}'
+      OPCAddress: '${scrap_parts_node_id}'
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - ForceType: Standard
+      LocalId: 1555781968
+      Name: '${runtime_minutes_node_id}'
+      OPCAddress: '${runtime_minutes_node_id}'
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - ForceType: Standard
+      LocalId: 129069833
+      Name: '${planned_minutes_node_id}'
+      OPCAddress: '${planned_minutes_node_id}'
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    Name: Items
+    _clrType:
+    - inray.OPCRouter.OPCPlugIn.Config.OPCTransferObject.OpcRegularItemsGroup, inray.OPCRouter4.OPCPlugIn
+  - Name: Wert-Zeitstempel
+    _clrType:
+    - inray.OPCRouter.OPCPlugIn.Config.OPCTransferObject.OpcValueTimestampGroup, inray.OPCRouter4.OPCPlugIn
+  - Name: Quality-ID
+    _clrType:
+    - inray.OPCRouter.OPCPlugIn.Config.OPCTransferObject.OpcQualityIntGroup, inray.OPCRouter4.OPCPlugIn
+  - Name: Quality-String
+    _clrType:
+    - inray.OPCRouter.OPCPlugIn.Config.OPCTransferObject.OpcQualityStringGroup, inray.OPCRouter4.OPCPlugIn
+  - Name: Node-ID
+    _clrType:
+    - inray.OPCRouter.OPCPlugIn.Config.OPCTransferObject.OpcNodeIDGroup, inray.OPCRouter4.OPCPlugIn
+  LocalId: 20
+  NullHandling: Discard
+  PlugIn: 2609030001-100000002-E5A1B2C3-00000002
+  PosX: 220
+  PosY: 20
+  _clrType:
+  - inray.OPCRouter.OPCPlugIn.Config.OPCTransferObjectConfig, inray.OPCRouter4.OPCPlugIn
+- Groups:
+  - Items:
+    - Direction: output
+      LocalId: 901
+      Name: Shift
+      VariantValue:
+        Value: '${shift_name}'
+        VariantType: System.String, System.Private.CoreLib
+        _clrType:
+        - inray.SDK.Data.YamlSerializer.YamlVariant, inray.SDK.Data
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.Static.StaticTransferObjectItem, inray.OPCRouter4.BasePlugIn
+    - Direction: output
+      LocalId: 902
+      Name: Line
+      VariantValue:
+        Value: '${line_name}'
+        VariantType: System.String, System.Private.CoreLib
+        _clrType:
+        - inray.SDK.Data.YamlSerializer.YamlVariant, inray.SDK.Data
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.Static.StaticTransferObjectItem, inray.OPCRouter4.BasePlugIn
+    - Direction: output
+      LocalId: 903
+      Name: IdealCycleSeconds
+      VariantValue:
+        Value: '${ideal_cycle_seconds}'
+        VariantType: System.Double, System.Private.CoreLib
+        _clrType:
+        - inray.SDK.Data.YamlSerializer.YamlVariant, inray.SDK.Data
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.Static.StaticTransferObjectItem, inray.OPCRouter4.BasePlugIn
+    - Direction: output
+      LocalId: 904
+      Name: Recipient
+      VariantValue:
+        Value: '${notification_recipient}'
+        VariantType: System.String, System.Private.CoreLib
+        _clrType:
+        - inray.SDK.Data.YamlSerializer.YamlVariant, inray.SDK.Data
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.Static.StaticTransferObjectItem, inray.OPCRouter4.BasePlugIn
+  LocalId: 900
+  PlugIn: BasePlugInConfig
+  PosX: 220
+  PosY: 200
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.Static.StaticTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- Groups:
+  - Items:
+    - ContractType: String
+      Direction: input
+      LocalId: 108
+      Name: Recipient
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: String
+      Direction: input
+      LocalId: 101
+      Name: Shift
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: String
+      Direction: input
+      LocalId: 102
+      Name: Line
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: Double
+      Direction: input
+      LocalId: 103
+      Name: GoodParts
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: Double
+      Direction: input
+      LocalId: 104
+      Name: ScrapParts
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: Double
+      Direction: input
+      LocalId: 105
+      Name: RuntimeMinutes
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: Double
+      Direction: input
+      LocalId: 106
+      Name: PlannedMinutes
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: Double
+      Direction: input
+      LocalId: 107
+      Name: IdealCycleSeconds
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    Name: Function Block Inputs
+  - Name: Function Block Variable Inputs
+  - Items: []
+    Name: Function Block Outputs
+  LocalId: 100
+  PlugIn: BasePlugInConfig
+  PosX: 620
+  PosY: 0
+  ReusableScopeDefinitionId: 5e1a0f3c2b9d4a1e8c7f6b5a4d3c2b12
+  ReusableScopeDefinitionName: '${fx_report_name}'
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.FunctionBlock.FunctionBlockCallTransferObjectConfig, inray.OPCRouter4.BasePlugIn

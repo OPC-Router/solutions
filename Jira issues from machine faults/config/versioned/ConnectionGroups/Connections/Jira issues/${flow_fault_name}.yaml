@@ -1,0 +1,189 @@
+ConnectionLines:
+- ItemStart: 11
+  ItemStop: 110963053
+- ItemStart: 1909948278
+  ItemStop: 102
+- ItemStart: 11
+  ItemStop: 1144911318
+- ItemStart: 1955617575
+  ItemStop: 101
+PublishedUtcTimestamp: '0001-01-01T00:00:00.0000000Z'
+TransferObjects:
+- BlockTime: 60s
+  ConfigType: 3004
+  Groups:
+  - GroupType: 3050
+    Items:
+    - Direction: output
+      LocalId: 11
+      Name: Wert
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: QualityInt
+      LocalId: 494445509
+      Name: Quality-ID
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: QualityString
+      LocalId: 248539874
+      Name: Quality-String
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: Timestamp
+      LocalId: 1067799234
+      Name: Wert-Zeitstempel
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: ItemName
+      LocalId: 873547789
+      Name: Datenpunkt-Name
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    Name: Items
+    _clrType:
+    - inray.OPCRouter.OPCPlugIn.Config.OPCTransferObject.OpcRegularItemsGroup, inray.OPCRouter4.OPCPlugIn
+  ItemAddress: '${fault_node_id}'
+  LocalId: 10
+  OPCAddress: '${fault_node_id}'
+  PlugIn: 2609030004-100000002-D4E5F6A7-00000002
+  PlugInType: 3100
+  PosX: 20
+  PosY: 160
+  TriggerOnStart: false
+  TriggerType: OnEveryChange
+  _clrType:
+  - inray.OPCRouter.OPCPlugIn.Config.DatachangeTrigger.DatachangeTriggerConfig, inray.OPCRouter4.OPCPlugIn
+- GridSnapPixel: 4
+  Groups:
+  - GroupType: 1052
+    Items:
+    - Culture: 1031
+      DefaultValue:
+        Value: ''
+        VariantType: System.String, System.Private.CoreLib
+        _clrType:
+        - inray.SDK.Data.YamlSerializer.YamlVariant, inray.SDK.Data
+      Direction: input
+      LocalId: 1144911318
+      Name: CODE
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.TextReplace.TextReplaceTransferObjectItem, inray.OPCRouter4.BasePlugIn
+    Name: Platzhalter
+    _clrType:
+    - inray.OPCRouter.BasePlugIn.Config.TextReplace.PlaceholderGroup, inray.OPCRouter4.BasePlugIn
+  - GroupType: 1053
+    Items:
+    - DefaultValue:
+        Value:
+        _clrType:
+        - inray.SDK.Data.YamlSerializer.YamlVariant, inray.SDK.Data
+      LocalId: 1955617575
+      Name: Content
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.TextReplace.TextReplaceTransferObjectItem, inray.OPCRouter4.BasePlugIn
+    Name: Inhalt
+    _clrType:
+    - inray.OPCRouter.BasePlugIn.Config.TextReplace.ContentGroup, inray.OPCRouter4.BasePlugIn
+  LocalId: 1074323700
+  PlugIn: BasePlugInConfig
+  PosX: 500
+  PosY: 220
+  Text: '${machine_name}: fault code {CODE}'
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.TextReplace.TextReplaceTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- GridSnapPixel: 17
+  Groups:
+  - GroupType: 1052
+    Items:
+    - Culture: 1031
+      DefaultValue:
+        Value: ''
+        VariantType: System.String, System.Private.CoreLib
+        _clrType:
+        - inray.SDK.Data.YamlSerializer.YamlVariant, inray.SDK.Data
+      Direction: input
+      LocalId: 110963053
+      Name: CODE
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.TextReplace.TextReplaceTransferObjectItem, inray.OPCRouter4.BasePlugIn
+    Name: Platzhalter
+    _clrType:
+    - inray.OPCRouter.BasePlugIn.Config.TextReplace.PlaceholderGroup, inray.OPCRouter4.BasePlugIn
+  - GroupType: 1053
+    Items:
+    - LocalId: 1909948278
+      Name: Content
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.TextReplace.TextReplaceTransferObjectItem, inray.OPCRouter4.BasePlugIn
+    Name: Inhalt
+    _clrType:
+    - inray.OPCRouter.BasePlugIn.Config.TextReplace.ContentGroup, inray.OPCRouter4.BasePlugIn
+  LocalId: 971387022
+  PlugIn: BasePlugInConfig
+  PosX: 500
+  PosY: 380
+  Text: 'The OPC Router detected fault code {CODE} on ${machine_name}. Please check the machine and close this issue when the fault is cleared.'
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.TextReplace.TextReplaceTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- FixedInputValues:
+  - Name: Priority
+    Value: '${issue_priority}'
+  - Name: Label1
+    Value: opcrouter
+  - Name: Label2
+    Value: '${machine_label}'
+  Groups:
+  - Items:
+    - Direction: input
+      LocalId: 101
+      Name: Summary
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 102
+      Name: Description
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 103
+      Name: Priority
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 104
+      Name: Label1
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 105
+      Name: Label2
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    Name: Function Block Inputs
+  - Name: Function Block Variable Inputs
+  - Items:
+    - Direction: output
+      LocalId: 106
+      Name: IssueKey
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    Name: Function Block Outputs
+  LocalId: 100
+  PlugIn: BasePlugInConfig
+  PosX: 820
+  PosY: 240
+  ReusableScopeDefinitionId: b4d6f8a0c2e4416a8b0c2d4e6f8a0b41
+  ReusableScopeDefinitionName: '${fx_issue_name}'
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.FunctionBlock.FunctionBlockCallTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- LocalId: 700001
+  PlugIn: BasePlugInConfig
+  PosX: 20
+  PosY: 20
+  Summary: '<p>The sample opens an issue on <strong>every</strong> change of the fault node - including the change back to 0 when the fault clears - and does not fire at start-up.</p><p><br></p><p>For the rising edge only, set the trigger to <em>exact value</em> or add a <em>Condition (IF)</em> in front of the function call.</p>'
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.Note.NoteTransferObjectConfig, inray.OPCRouter4.BasePlugIn

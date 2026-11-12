@@ -1,0 +1,13 @@
+BrokerAddress: "${mqtt_broker_address}"
+ClientID: "${mqtt_client_id}"
+Id: 2609030002-100000001-A1B2C3D4-00000001
+InstanceName: '${mqtt_instance_name}'
+PasswordKey: ${mqtt_password_key}
+PlugInTypeID: 20000
+Port: ${mqtt_port}
+ProtocolVersion: V_5
+SSL: ${mqtt_tls}
+StartMode: AlwaysOn
+Username: "${mqtt_username}"
+_clrType:
+- inray.OPCRouter.MqttPlugIn.MqttPlugInConfig, inray.OPCRouter4.MqttPlugIn

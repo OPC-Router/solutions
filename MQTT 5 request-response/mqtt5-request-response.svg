@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="72" fill="#660066"/>
+  <path d="M120 200 H330" stroke="#ffffff" stroke-width="26" stroke-linecap="round"/>
+  <path d="M300 160 L350 200 L300 240" fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M392 312 H182" stroke="#ffd166" stroke-width="26" stroke-linecap="round"/>
+  <path d="M212 272 L162 312 L212 352" fill="none" stroke="#ffd166" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="256" y="440" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="84" font-weight="700" fill="#ffffff">MQTT 5</text>
+</svg>

@@ -1,0 +1,8 @@
+AuthentificationMode: None
+HostAddress: "${jira_url}"
+Id: 2609030004-100000001-D4E5F6A7-00000001
+InstanceName: '${rest_instance_name}'
+PlugInTypeID: 18000
+StartMode: AlwaysOn
+_clrType:
+- inray.OPCRouter.RestPlugIn.Client.Config.RestPlugInConfig, inray.OPCRouter4.RestPlugIn

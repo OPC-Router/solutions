@@ -1,0 +1,147 @@
+ConnectionLines:
+- ItemStart: 1630390220
+  ItemStop: 107
+- ItemStart: 1992672857
+  ItemStop: 106
+- ItemStart: 1475812984
+  ItemStop: 109
+- ItemStart: 1319039137
+  ItemStop: 108
+PublishedUtcTimestamp: '0001-01-01T00:00:00.0000000Z'
+TransferObjects:
+- DefaultDatapointSettings: {}
+  EnableCyclicBrowseWorker: '${refresh_items}'
+  GridSnapPixel: 18
+  Groups:
+  - Items:
+    - Direction: output
+      LocalId: 1630390220
+      Name: Value
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: QualityInt
+      LocalId: 685931627
+      Name: Quality ID
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: QualityString
+      LocalId: 1319039137
+      Name: Quality String
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: Timestamp
+      LocalId: 1475812984
+      Name: Value Timestamp
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: ItemName
+      LocalId: 1540328425
+      Name: Node ID
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: ItemNamespaceName
+      LocalId: 1223760102
+      Name: Item namespace
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: ItemDisplayName
+      LocalId: 1992672857
+      Name: Item name
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: ItemPath
+      LocalId: 507606565
+      Name: Item path
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+  LocalId: 1698070721
+  OPCAddress: '${opc_root_path}'
+  PlugIn: 2609030005-100000002-E5F6A7B8-00000002
+  PosY: 20
+  _clrType:
+  - inray.OPCRouter.OPCPlugIn.Config.MultiDatachangeTrigger.MultiDatachangeTriggerConfig, inray.OPCRouter4.OPCPlugIn
+- FixedInputValues:
+  - Name: Enterprise
+    Value: '${uns_enterprise}'
+  - Name: Site
+    Value: '${uns_site}'
+  - Name: Area
+    Value: '${uns_area}'
+  - Name: Line
+    Value: '${uns_line}'
+  - Name: Cell
+    Value: '${uns_cell}'
+  Groups:
+  - Items:
+    - ContractType: String
+      Direction: input
+      LocalId: 101
+      Name: Enterprise
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: String
+      Direction: input
+      LocalId: 102
+      Name: Site
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: String
+      Direction: input
+      LocalId: 103
+      Name: Area
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: String
+      Direction: input
+      LocalId: 104
+      Name: Line
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: String
+      Direction: input
+      LocalId: 105
+      Name: Cell
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: StringArray
+      Direction: input
+      LocalId: 106
+      Name: Tag
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: DoubleArray
+      Direction: input
+      LocalId: 107
+      Name: Value
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: StringArray
+      Direction: input
+      LocalId: 108
+      Name: Quality
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: StringArray
+      Direction: input
+      LocalId: 109
+      Name: Timestamp
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    Name: Function Block Inputs
+  - Name: Function Block Variable Inputs
+  - Items: []
+    Name: Function Block Outputs
+  LocalId: 100
+  PlugIn: BasePlugInConfig
+  PosX: 520
+  ReusableScopeDefinitionId: c5e7a9b1d3f54c6e8a0b2c4d6e8f0a51
+  ReusableScopeDefinitionName: '${fx_publish_name}'
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.FunctionBlock.FunctionBlockCallTransferObjectConfig, inray.OPCRouter4.BasePlugIn

@@ -1,0 +1,139 @@
+ConnectionLines:
+- ItemStart: 103
+  ItemStop: 301
+- ItemStart: 101
+  ItemStop: 308
+- ItemStart: 102
+  ItemStop: 303
+- ItemStart: 104
+  ItemStop: 304
+- ItemStart: 105
+  ItemStop: 305
+- ItemStart: 201
+  ItemStop: 306
+- ItemStart: 202
+  ItemStop: 307
+ConnectionType: Template
+InternalScope:
+  Description: Publishes an answer to the response topic of an MQTT 5 request, echoing the correlation data and adding the user properties traceId, status, sourceSystem and schemaVersion. Inputs - ResponseTopic, CorrelationData, Payload, TraceId, Status.
+  InternalCallOnly: true
+  ReusableScopeDefinitionId: 7a2c4e6f8b0d4c2e9a1b3c5d7e9f0a21
+  ScopeRole: FunctionBlockBody
+TransferObjects:
+- Groups:
+  - Items:
+    - Direction: output
+      LocalId: 103
+      Name: Payload
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: output
+      LocalId: 101
+      Name: ResponseTopic
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: ByteArray
+      Direction: output
+      LocalId: 102
+      Name: CorrelationData
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: output
+      LocalId: 104
+      Name: TraceId
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: output
+      LocalId: 105
+      Name: Status
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    Name: Scope Inputs
+  LocalId: 100
+  PosX: 20
+  PosY: 20
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeInputTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- Groups:
+  - Items:
+    - Direction: output
+      LocalId: 201
+      Name: sourceSystem
+      VariantValue:
+        Value: '${source_system_name}'
+        VariantType: System.String, System.Private.CoreLib
+        _clrType:
+        - inray.SDK.Data.YamlSerializer.YamlVariant, inray.SDK.Data
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.Static.StaticTransferObjectItem, inray.OPCRouter4.BasePlugIn
+    - Direction: output
+      LocalId: 202
+      Name: schemaVersion
+      VariantValue:
+        Value: '1.0'
+        VariantType: System.String, System.Private.CoreLib
+        _clrType:
+        - inray.SDK.Data.YamlSerializer.YamlVariant, inray.SDK.Data
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.Static.StaticTransferObjectItem, inray.OPCRouter4.BasePlugIn
+  LocalId: 200
+  PlugIn: BasePlugInConfig
+  PosX: 40
+  PosY: 220
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.Static.StaticTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- DynamicTopic: true
+  Groups:
+  - Items:
+    - Direction: input
+      LocalId: 301
+      Name: Payload
+    - Direction: input
+      LocalId: 308
+      Name: Topic
+  - Items:
+    - Direction: input
+      LocalId: 303
+      Name: CorrelationData
+    - Direction: input
+      LocalId: 931629559
+      Name: ResponseTopic
+    Name: Parameter
+    _clrType:
+    - inray.OPCRouter.MqttPlugIn.MqttParameterItemGroup, inray.OPCRouter4.MqttPlugIn
+  - Items:
+    - Direction: input
+      LocalId: 304
+      Name: traceId
+    - Direction: input
+      LocalId: 305
+      Name: status
+    - Direction: input
+      LocalId: 306
+      Name: sourceSystem
+    - Direction: input
+      LocalId: 307
+      Name: schemaVersion
+    Name: User properties
+    _clrType:
+    - inray.OPCRouter.MqttPlugIn.MqttUserPropertyItemGroup, inray.OPCRouter4.MqttPlugIn
+  LocalId: 300
+  PlugIn: 2609030002-100000001-A1B2C3D4-00000001
+  PosX: 340
+  PosY: 20
+  Topic: response-topic-of-the-request
+  UseResponseCorrelationData: true
+  UserPropertyItems:
+  - Name: traceId
+  - Name: status
+  - Name: sourceSystem
+  - Name: schemaVersion
+  _clrType:
+  - inray.OPCRouter.MqttPlugIn.MqttTransferObjectConfig, inray.OPCRouter4.MqttPlugIn
+- Groups:
+  - Name: Scope Return Values
+  LocalId: 400
+  PosX: 660
+  PosY: 20
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeReturnTransferObjectConfig, inray.OPCRouter4.BasePlugIn

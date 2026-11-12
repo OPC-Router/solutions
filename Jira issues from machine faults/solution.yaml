@@ -1,0 +1,148 @@
+FormatVersion: 1
+CompatibleVersionRange: ">=5.7"
+Tags:
+  - REST
+  - OPC
+IconFile: "jira-issues.svg"
+DisplayName:
+  DE: "Jira-Issues aus Maschinenstörungen"
+  EN: "Jira issues from machine faults"
+ShortDescription:
+  DE: "Störungen aus OPC UA als Jira-Vorgänge anlegen (Jira Cloud REST API v3), mit Priorität und Labels"
+  EN: "Create Jira issues from OPC UA faults (Jira Cloud REST API v3) with priority and labels"
+ParameterReplacementFileRegex: ".*\\.yaml"
+Parameters:
+  rest_instance_name:
+    Type: "FileName"
+    Label:
+      DE: "Name der REST-Anbindung (Jira)"
+      EN: "REST plug-in instance name (Jira)"
+    HelpText:
+      DE: "Eindeutiger Name der REST-Anbindung, die die Solution für die Jira-Cloud-API anlegt."
+      EN: "Unique name of the REST plug-in instance the solution creates for the Jira Cloud API."
+    Default: "Jira Cloud API"
+  jira_url:
+    Type: "String"
+    Label:
+      DE: "Jira-URL"
+      EN: "Jira URL"
+    HelpText:
+      DE: "Basis-URL der Jira-Cloud-Site, z. B. https://your-site.atlassian.net"
+      EN: "Base URL of the Jira Cloud site, e.g. https://your-site.atlassian.net"
+    Default: "https://your-site.atlassian.net"
+  auth_variable_name:
+    Type: "FileName"
+    Label:
+      DE: "Variable mit dem Authorization-Header"
+      EN: "Variable holding the Authorization header"
+    HelpText:
+      DE: "Name der Secret-String-Variable, aus der die Funktion den HTTP-Header Authorization liest (verschlüsselt gespeichert)."
+      EN: "Name of the secret-string variable the function reads the HTTP header Authorization from (stored encrypted)."
+    Default: "Jira API authorization header"
+  auth_header_value:
+    Type: "String"
+    Label:
+      DE: "Authorization-Header (Wert)"
+      EN: "Authorization header (value)"
+    HelpText:
+      DE: "Wert des HTTP-Headers Authorization: Basic <Base64 von E-Mail:API-Token> (Linux/macOS: echo -n 'you@example.com:TOKEN' | base64; PowerShell: [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes('you@example.com:TOKEN')))."
+      EN: "Value of the HTTP header Authorization: Basic <base64 of e-mail:API token> (Linux/macOS: echo -n 'you@example.com:TOKEN' | base64; PowerShell: [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes('you@example.com:TOKEN')))."
+  jira_project_key:
+    Type: "String"
+    Label:
+      DE: "Projekt-Key"
+      EN: "Project key"
+    HelpText:
+      DE: "Key des Jira-Projekts, in dem die Vorgänge angelegt werden (z. B. OPS)."
+      EN: "Key of the Jira project the issues are created in (e.g. OPS)."
+    Default: "OPS"
+  jira_issue_type:
+    Type: "String"
+    Label:
+      DE: "Vorgangstyp"
+      EN: "Issue type"
+    HelpText:
+      DE: "Name des Jira-Vorgangstyps, mit dem die Störungsvorgänge angelegt werden (z. B. Task, Bug)."
+      EN: "Name of the Jira issue type the fault issues are created as (e.g. Task, Bug)."
+    Default: "Task"
+  fx_issue_name:
+    Type: "FileName"
+    Label:
+      DE: "Vorgang-Funktion-Name"
+      EN: "Issue function name"
+    HelpText:
+      DE: "Name der Funktion (FX): Summary, Description, Priority, zwei Labels rein, Issue-Key raus."
+      EN: "Name of the function (FX): summary, description, priority and two labels in, issue key out."
+    Default: "Create Jira issue"
+  flow_fault_name:
+    Type: "FileName"
+    Label:
+      DE: "Störungs-Flow-Name"
+      EN: "Fault flow name"
+    HelpText:
+      DE: "Name des Beispiel-Flows, der bei einer Wertänderung des Störungs-Knotens den Jira-Vorgang über die Funktion anlegt. Muss im Projekt eindeutig sein."
+      EN: "Name of the sample flow that creates the Jira issue through the function on a value change of the fault node. Must be unique in the project."
+    Default: "Sample - Jira issue on machine fault"
+  opc_ua_instance_name:
+    Type: "FileName"
+    Label:
+      DE: "Name der OPC-UA-Anbindung"
+      EN: "OPC UA plug-in instance name"
+    HelpText:
+      DE: "Eindeutiger Name der OPC-UA-Anbindung, die die Solution anlegt und aus der der Beispiel-Flow liest."
+      EN: "Unique name of the OPC UA plug-in instance the solution creates and that the sample flow reads from."
+    Default: "Jira OPC UA Client"
+  opc_ua_endpoint:
+    Type: "String"
+    Label:
+      DE: "OPC-UA-Endpunkt"
+      EN: "OPC UA endpoint"
+    HelpText:
+      DE: "Endpunkt des OPC-UA-Servers, aus dem der Beispiel-Flow den Störungs-Knoten liest."
+      EN: "Endpoint of the OPC UA server the sample flow reads the fault node from."
+    Default: "opc.tcp://localhost:4840"
+  fault_node_id:
+    Type: "String"
+    Label:
+      DE: "Störungs-Knoten (Browse Path)"
+      EN: "Fault node (browse path)"
+    HelpText:
+      DE: "OPC-UA-Knoten als Browse Path, dessen Wertänderung einen Vorgang anlegt. Im Tag-Browser der Anbindung auswählen. Für nur steigende Flanken den Trigger auf einen exakten Wert einschränken."
+      EN: "OPC UA node as a browse path whose value change creates an issue. Select it via the plug-in instance's tag browser. Restrict the trigger to an exact value for rising edges only."
+    Default: "bp=Objects/2:Machine/2:FaultCode;"
+  machine_name:
+    Type: "String"
+    Label:
+      DE: "Maschinenname"
+      EN: "Machine name"
+    HelpText:
+      DE: "Erscheint in Zusammenfassung und Beschreibung des Vorgangs. Keine Anführungszeichen verwenden – der Name steht in einer Formel."
+      EN: "Appears in the summary and description of the issue. Use no quotation marks - the name sits inside a formula."
+    Default: "Press 01"
+  machine_label:
+    Type: "String"
+    Label:
+      DE: "Label der Maschine im Vorgang"
+      EN: "Machine label on the issue"
+    HelpText:
+      DE: "Zweites Label neben opcrouter. Jira-Labels dürfen keine Leerzeichen enthalten."
+      EN: "Second label next to opcrouter; Jira labels must not contain spaces."
+    Default: "press-01"
+  issue_priority:
+    Type: "Dropdown"
+    Label:
+      DE: "Priorität der Störungsvorgänge"
+      EN: "Priority of fault issues"
+    HelpText:
+      DE: "Jira-Priorität, mit der die Störungsvorgänge angelegt werden. Der Name muss einer Priorität des Jira-Projekts entsprechen."
+      EN: "Jira priority the fault issues are created with. The name must match a priority of the Jira project."
+    Items:
+      - Value: "Highest"
+        DisplayText: "Highest"
+      - Value: "High"
+        DisplayText: "High"
+      - Value: "Medium"
+        DisplayText: "Medium"
+      - Value: "Low"
+        DisplayText: "Low"
+    Default: "High"

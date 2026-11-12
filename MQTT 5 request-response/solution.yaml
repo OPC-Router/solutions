@@ -1,0 +1,132 @@
+FormatVersion: 1
+CompatibleVersionRange: ">=5.7"
+Tags:
+  - MQTT
+  - OPC
+IconFile: "mqtt5-request-response.svg"
+DisplayName:
+  DE: "MQTT 5 Request/Response (RPC über MQTT)"
+  EN: "MQTT 5 request/response (RPC over MQTT)"
+ShortDescription:
+  DE: "Anfragen per MQTT 5 auf dem Response-Topic der Anfrage beantworten, mit User Properties für Routing und Nachverfolgung, z. B. OPC-UA-Werte auf Anfrage"
+  EN: "Answer requests over MQTT 5 on the request's response topic, with user properties for routing and tracing, e.g. OPC UA values on demand"
+ParameterReplacementFileRegex: ".*\\.yaml"
+Parameters:
+  mqtt_instance_name:
+    Type: "FileName"
+    Label:
+      DE: "Name der MQTT-Anbindung"
+      EN: "MQTT plug-in instance name"
+    HelpText:
+      DE: "Eindeutiger Name der MQTT-Anbindung, die die Solution anlegt."
+      EN: "Unique name of the MQTT plug-in instance the solution creates."
+    Default: "RPC MQTT Broker"
+  mqtt_broker_address:
+    Type: "String"
+    Label:
+      DE: "MQTT-Broker (Host)"
+      EN: "MQTT broker (host)"
+    HelpText:
+      DE: "Hostname oder IP-Adresse des Brokers. Der Broker muss MQTT 5 unterstützen (z. B. Mosquitto 2, EMQX, HiveMQ)."
+      EN: "Host name or IP address of the broker. The broker must support MQTT 5 (e.g. Mosquitto 2, EMQX, HiveMQ)."
+  mqtt_port:
+    Type: "Integer"
+    Label:
+      DE: "MQTT-Port"
+      EN: "MQTT port"
+    HelpText:
+      DE: "Port des MQTT-Brokers. Übliche Werte: 1883 unverschlüsselt, 8883 mit TLS."
+      EN: "Port of the MQTT broker. Common values: 1883 plain, 8883 with TLS."
+    Default: 1883
+    Min: 1
+    Max: 65535
+  mqtt_tls:
+    Type: "Boolean"
+    Label:
+      DE: "TLS verwenden"
+      EN: "Use TLS"
+    HelpText:
+      DE: "Aktivieren für Port 8883 / TLS. Zertifikatsvertrauen in der Anbindung prüfen."
+      EN: "Enable for port 8883 / TLS. Check the certificate trust settings of the plug-in instance."
+    Default: false
+  mqtt_client_id:
+    Type: "String"
+    Label:
+      DE: "Client-ID"
+      EN: "Client id"
+    HelpText:
+      DE: "Muss je Instanz eindeutig sein – zwei Clients mit derselben ID verdrängen sich gegenseitig."
+      EN: "Must be unique per instance - two clients with the same id evict each other."
+    Default: "opcrouter-rpc"
+  mqtt_username:
+    Type: "String"
+    Required: false
+    Label:
+      DE: "Benutzername"
+      EN: "User name"
+    HelpText:
+      DE: "Benutzername für die Anmeldung am MQTT-Broker. Leer lassen, wenn der Broker anonyme Verbindungen erlaubt."
+      EN: "User name for authenticating with the MQTT broker. Leave empty when the broker accepts anonymous connections."
+    Default: ""
+  mqtt_password_key:
+    Type: "SecretKey"
+    Required: false
+    Label:
+      DE: "Passwort (Secret)"
+      EN: "Password (secret)"
+    HelpText:
+      DE: "Leer lassen, wenn der Broker anonyme Verbindungen erlaubt."
+      EN: "Leave empty when the broker accepts anonymous connections."
+  request_topic:
+    Type: "String"
+    Label:
+      DE: "Request-Topic (Lesen)"
+      EN: "Request topic (read)"
+    HelpText:
+      DE: "Topic, auf dem Anfragen erwartet werden. Payload: {\"browsePath\": \"<Browse Path>\"}. Die Antwort geht an das Response-Topic der Anfrage."
+      EN: "Topic on which requests are expected. Payload: {\"browsePath\": \"<browse path>\"}. The answer goes to the request's response topic."
+    Default: "opcrouter/rpc/read"
+  source_system_name:
+    Type: "String"
+    Label:
+      DE: "User Property sourceSystem"
+      EN: "User property sourceSystem"
+    HelpText:
+      DE: "Wert der User Property sourceSystem in jeder Antwort (Kennung dieser Instanz)."
+      EN: "Value of the user property sourceSystem in every answer (identifies this instance)."
+  fx_answer_name:
+    Type: "FileName"
+    Label:
+      DE: "Antwort-Funktion-Name"
+      EN: "Answer function name"
+    HelpText:
+      DE: "Name der Funktion (FX), die eine Antwort an Response-Topic mit Correlation Data und User Properties veröffentlicht."
+      EN: "Name of the function (FX) that publishes an answer to the response topic with correlation data and user properties."
+    Default: "Answer MQTT request"
+  flow_read_name:
+    Type: "FileName"
+    Label:
+      DE: "Anfrage-Flow-Name"
+      EN: "Request flow name"
+    HelpText:
+      DE: "Name des Beispiel-Flows, der ein eingehendes Request-Topic entgegennimmt, den angefragten OPC-UA-Knoten liest und die Antwort über die Funktion sendet. Muss im Projekt eindeutig sein."
+      EN: "Name of the sample flow that receives an incoming request topic, reads the requested OPC UA node and sends the answer through the function. Must be unique in the project."
+    Default: "Sample - read OPC UA node on request"
+  opc_ua_instance_name:
+    Type: "FileName"
+    Label:
+      DE: "Name der OPC-UA-Anbindung"
+      EN: "OPC UA plug-in instance name"
+    HelpText:
+      DE: "Eindeutiger Name der OPC-UA-Anbindung, die die Solution anlegt und aus der der Beispiel-Flow liest."
+      EN: "Unique name of the OPC UA plug-in instance the solution creates and that the sample flow reads from."
+    Default: "RPC OPC UA Client"
+  opc_ua_endpoint:
+    Type: "String"
+    Label:
+      DE: "OPC-UA-Endpunkt"
+      EN: "OPC UA endpoint"
+    HelpText:
+      DE: "Endpunkt des OPC-UA-Servers, aus dem der Beispiel-Flow den angefragten Knoten liest."
+      EN: "Endpoint of the OPC UA server the sample flow reads the requested node from."
+    Default: "opc.tcp://localhost:4840"

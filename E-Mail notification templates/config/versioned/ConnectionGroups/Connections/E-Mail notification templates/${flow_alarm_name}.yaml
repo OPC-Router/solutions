@@ -1,0 +1,168 @@
+ConnectionLines:
+- ItemStart: 164238259
+  ItemStop: 105
+- ItemStart: 1521158745
+  ItemStop: 106
+- ItemStart: 901
+  ItemStop: 107
+- ItemStart: 902
+  ItemStop: 101
+- ItemStart: 903
+  ItemStop: 102
+- ItemStart: 904
+  ItemStop: 104
+- ItemStart: 905
+  ItemStop: 103
+PublishedUtcTimestamp: '0001-01-01T00:00:00.0000000Z'
+TransferObjects:
+- GridSnapPixel: 21
+  Groups:
+  - Items:
+    - Direction: input
+      LocalId: 107
+      Name: Recipient
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 101
+      Name: Title
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 102
+      Name: Message
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 104
+      Name: Source
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 105
+      Name: Value
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 106
+      Name: Timestamp
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 103
+      Name: Severity
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    Name: Function Block Inputs
+  - Name: Function Block Variable Inputs
+  - Name: Function Block Outputs
+  LocalId: 100
+  PlugIn: BasePlugInConfig
+  PosX: 440
+  PosY: 100
+  ReusableScopeDefinitionId: 5e1a0f3c2b9d4a1e8c7f6b5a4d3c2b11
+  ReusableScopeDefinitionName: '${fx_alarm_name}'
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.FunctionBlock.FunctionBlockCallTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- Groups:
+  - Items:
+    - Direction: output
+      LocalId: 901
+      Name: Recipient
+      VariantValue:
+        Value: '${notification_recipient}'
+        VariantType: System.String, System.Private.CoreLib
+        _clrType:
+        - inray.SDK.Data.YamlSerializer.YamlVariant, inray.SDK.Data
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.Static.StaticTransferObjectItem, inray.OPCRouter4.BasePlugIn
+    - Direction: output
+      LocalId: 902
+      Name: Title
+      VariantValue:
+        Value: Machine fault reported
+        VariantType: System.String, System.Private.CoreLib
+        _clrType:
+        - inray.SDK.Data.YamlSerializer.YamlVariant, inray.SDK.Data
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.Static.StaticTransferObjectItem, inray.OPCRouter4.BasePlugIn
+    - Direction: output
+      LocalId: 903
+      Name: Message
+      VariantValue:
+        Value: The monitored alarm signal changed. Please check the machine and acknowledge the fault in the control system.
+        VariantType: System.String, System.Private.CoreLib
+        _clrType:
+        - inray.SDK.Data.YamlSerializer.YamlVariant, inray.SDK.Data
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.Static.StaticTransferObjectItem, inray.OPCRouter4.BasePlugIn
+    - Direction: output
+      LocalId: 904
+      Name: Source
+      VariantValue:
+        Value: '${alarm_source_name}'
+        VariantType: System.String, System.Private.CoreLib
+        _clrType:
+        - inray.SDK.Data.YamlSerializer.YamlVariant, inray.SDK.Data
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.Static.StaticTransferObjectItem, inray.OPCRouter4.BasePlugIn
+    - Direction: output
+      LocalId: 905
+      Name: Severity
+      VariantValue:
+        Value: Alarm
+        VariantType: System.String, System.Private.CoreLib
+        _clrType:
+        - inray.SDK.Data.YamlSerializer.YamlVariant, inray.SDK.Data
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.Static.StaticTransferObjectItem, inray.OPCRouter4.BasePlugIn
+  LocalId: 900
+  PlugIn: BasePlugInConfig
+  PosX: 740
+  PosY: 200
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.Static.StaticTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- BlockTime: 60second
+  ConfigType: 3004
+  ForceCycle: ''
+  GridSnapPixel: 9
+  Groups:
+  - Items:
+    - Direction: output
+      LocalId: 164238259
+      Name: Value
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: QualityInt
+      LocalId: 1247159916
+      Name: Quality ID
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: QualityString
+      LocalId: 1687294244
+      Name: Quality String
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: Timestamp
+      LocalId: 1521158745
+      Name: Value Timestamp
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: ItemName
+      LocalId: 1808049633
+      Name: Item name
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+  ItemAddress: '${alarm_node_id}'
+  LocalId: 1240331623
+  OPCAddress: '${alarm_node_id}'
+  PlugIn: 2609030001-100000002-E5A1B2C3-00000002
+  PlugInType: 3100
+  PosY: 80
+  TriggerType: OnEveryChange
+  _clrType:
+  - inray.OPCRouter.OPCPlugIn.Config.DatachangeTrigger.DatachangeTriggerConfig, inray.OPCRouter4.OPCPlugIn

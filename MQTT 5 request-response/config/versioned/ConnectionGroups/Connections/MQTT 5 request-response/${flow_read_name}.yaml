@@ -1,0 +1,238 @@
+ConnectionLines:
+- ItemStart: 11
+  ItemStop: 21
+- ItemStart: 22
+  ItemStop: 31
+- ItemStart: 22
+  ItemStop: 41
+- ItemStart: 32
+  ItemStop: 42
+- ItemStart: 33
+  ItemStop: 43
+- ItemStart: 34
+  ItemStop: 44
+- ItemStart: 45
+  ItemStop: 103
+- ItemStart: 13
+  ItemStop: 101
+- ItemStart: 14
+  ItemStop: 102
+- ItemStart: 15
+  ItemStop: 104
+PublishedUtcTimestamp: '0001-01-01T00:00:00.0000000Z'
+TransferObjects:
+- AllowConfirmation: true
+  AllowUnlistedUserProperties: true
+  Groups:
+  - Items:
+    - Direction: output
+      LocalId: 11
+      Name: Payload
+    - Direction: output
+      LocalId: 12
+      Name: Topic
+  - Items:
+    - Direction: output
+      LocalId: 13
+      Name: ResponseTopic
+    - Direction: output
+      LocalId: 14
+      Name: CorrelationData
+    Name: Parameter
+    _clrType:
+    - inray.OPCRouter.MqttPlugIn.MqttParameterItemGroup, inray.OPCRouter4.MqttPlugIn
+  - Items:
+    - Direction: output
+      LocalId: 15
+      Name: traceId
+    Name: User properties
+    _clrType:
+    - inray.OPCRouter.MqttPlugIn.MqttUserPropertyItemGroup, inray.OPCRouter4.MqttPlugIn
+  - GroupType: 20103
+    Items:
+    - Direction: output
+      LocalId: 1028559600
+      Name: UnknownUserPropertyName
+    - Direction: output
+      LocalId: 1754509294
+      Name: UnknownUserPropertyValue
+    Name: Unbekannte Nutzereigenschaften
+    _clrType:
+    - inray.OPCRouter.MqttPlugIn.MqttUserPropertyItemGroup, inray.OPCRouter4.MqttPlugIn
+  LocalId: 10
+  PlugIn: 2609030002-100000001-A1B2C3D4-00000001
+  PosX: 20
+  PosY: 220
+  Topic: '${request_topic}'
+  UserProperties:
+  - Name: traceId
+  _clrType:
+  - inray.OPCRouter.MqttPlugIn.MqttTriggerConfig, inray.OPCRouter4.MqttPlugIn
+- Groups:
+  - Items:
+    - Direction: input
+      LocalId: 21
+      Name: Json
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectDocItem, inray.OPCRouter4.BasePlugIn
+    Name: JsonPath Doc
+  - Name: JsonPath Parameters
+  - Items:
+    - Direction: output
+      LocalId: 22
+      Name: browsePath
+      Value: browsePath
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectNodeItem, inray.OPCRouter4.BasePlugIn
+    Name: JsonPath Items
+  JsonDocument: '{"browsePath":"bp=Objects/2:Machine/2:GoodParts;"}'
+  LocalId: 20
+  PlugIn: BasePlugInConfig
+  PosX: 360
+  PosY: 220
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.JSON.JsonReadTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- Groups:
+  - GroupType: 3050
+    Items:
+    - Direction: input
+      ItemType: DynamicItem
+      LocalId: 31
+      Name: Node ids
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: DynamicValue
+      LocalId: 32
+      Name: Values
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: QualityString
+      LocalId: 33
+      Name: Quality
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    - Direction: output
+      ItemType: Timestamp
+      LocalId: 34
+      Name: Timestamp
+      _clrType:
+      - inray.OPCRouter.OPCPlugIn.Runtime.OPCTransferObjectItem, inray.OPCRouter4.OPCPlugIn
+    Name: Items
+    _clrType:
+    - inray.OPCRouter.OPCPlugIn.Config.OPCTransferObject.OpcRegularItemsGroup, inray.OPCRouter4.OPCPlugIn
+  - Name: Quality-ID
+    _clrType:
+    - inray.OPCRouter.OPCPlugIn.Config.OPCTransferObject.OpcQualityIntGroup, inray.OPCRouter4.OPCPlugIn
+  - Name: Quality-String
+    _clrType:
+    - inray.OPCRouter.OPCPlugIn.Config.OPCTransferObject.OpcQualityStringGroup, inray.OPCRouter4.OPCPlugIn
+  - Name: Wert-Zeitstempel
+    _clrType:
+    - inray.OPCRouter.OPCPlugIn.Config.OPCTransferObject.OpcValueTimestampGroup, inray.OPCRouter4.OPCPlugIn
+  LocalId: 30
+  NullHandling: Discard
+  PlugIn: 2609030002-100000002-A1B2C3D4-00000002
+  PosX: 600
+  PosY: 180
+  _clrType:
+  - inray.OPCRouter.OPCPlugIn.Config.OPCTransferObject.OPCDynamicReadTransferObjectConfig, inray.OPCRouter4.OPCPlugIn
+- Groups:
+  - Items:
+    - LocalId: 45
+      Name: Json
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectDocItem, inray.OPCRouter4.BasePlugIn
+    Name: JsonPath Doc
+  - Name: JsonPath Parameters
+  - Items:
+    - Direction: input
+      LocalId: 41
+      Name: browsePath
+      Value: '$.browsePath'
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectNodeItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 42
+      Name: value
+      Value: '$.value'
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectNodeItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 43
+      Name: quality
+      Value: '$.quality'
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectNodeItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 44
+      Name: timestamp
+      Value: '$.timestamp'
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectNodeItem, inray.OPCRouter4.BasePlugIn
+    Name: JsonPath Items
+  JsonDocument: '{"browsePath":"","value":0.0,"quality":"","timestamp":""}'
+  LocalId: 40
+  PlugIn: BasePlugInConfig
+  PosX: 920
+  PosY: 160
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.JSON.JsonWriteTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- FixedInputValues:
+  - Name: Status
+    Value: ok
+  Groups:
+  - Items:
+    - Direction: input
+      LocalId: 103
+      Name: Payload
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 101
+      Name: ResponseTopic
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: ByteArray
+      Direction: input
+      LocalId: 102
+      Name: CorrelationData
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 104
+      Name: TraceId
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 105
+      Name: Status
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    Name: Function Block Inputs
+  - Name: Function Block Variable Inputs
+  - Items: []
+    Name: Function Block Outputs
+  LocalId: 100
+  PlugIn: BasePlugInConfig
+  PosX: 1160
+  PosY: 280
+  ReusableScopeDefinitionId: 7a2c4e6f8b0d4c2e9a1b3c5d7e9f0a21
+  ReusableScopeDefinitionName: '${fx_answer_name}'
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.FunctionBlock.FunctionBlockCallTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- LocalId: 700004
+  PlugIn: BasePlugInConfig
+  PosX: 20
+  Summary: '<p>To build your own request handler: copy this sample flow.</p><p><br></p><p>Keep this trigger as is - response topic and correlation data output enabled, <code>traceId</code> user property declared - and replace the middle part (JSON Read, OPC UA Dynamic Read, JSON Write) with your own processing.</p><p>On error, set the <code>Status</code> input of <strong>Answer MQTT request</strong> to something other than <code>ok</code>, or wrap the processing in <em>Error handling (Try/Catch)</em> and answer from the catch branch.</p>'
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.Note.NoteTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- GridSnapPixel: 18
+  LocalId: 700005
+  PlugIn: BasePlugInConfig
+  PosX: 300
+  PosY: 500
+  Summary: '<p>This sample only answers the success case: a request with an unknown browse path or without a response topic produces no answer - the transfer fails and is logged.</p><p><br></p><p>For an answer in the error case, wrap the middle part in error handling (e.g. <em>Try/Catch</em>) and call <strong>Answer MQTT request</strong> from the error branch with <code>Status</code> = <code>error</code>.</p>'
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.Note.NoteTransferObjectConfig, inray.OPCRouter4.BasePlugIn

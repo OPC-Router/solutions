@@ -1,0 +1,209 @@
+ConnectionLines:
+- ItemStart: 101
+  ItemStop: 211
+- ItemStart: 102
+  ItemStop: 212
+- ItemStart: 103
+  ItemStop: 213
+- ItemStart: 104
+  ItemStop: 214
+- ItemStart: 105
+  ItemStop: 215
+- ItemStart: 106
+  ItemStop: 216
+- ItemStart: 106
+  ItemStop: 311
+- ItemStart: 107
+  ItemStop: 312
+- ItemStart: 108
+  ItemStop: 313
+- ItemStart: 109
+  ItemStop: 314
+- ItemStart: 221
+  ItemStop: 402
+- ItemStart: 305
+  ItemStop: 401
+ConnectionType: Template
+InternalScope:
+  Description: Builds the ISA-95 topic enterprise/site/area/line/cell/tag and a normalised JSON payload (value, quality, timestamp, tag) and publishes it. Inputs - Enterprise, Site, Area, Line, Cell, Tag, Value, Quality, Timestamp.
+  InternalCallOnly: true
+  ReusableScopeDefinitionId: c5e7a9b1d3f54c6e8a0b2c4d6e8f0a51
+  ScopeRole: FunctionBlockBody
+TransferObjects:
+- Groups:
+  - Items:
+    - ContractType: String
+      Direction: output
+      LocalId: 101
+      Name: Enterprise
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: String
+      Direction: output
+      LocalId: 102
+      Name: Site
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: String
+      Direction: output
+      LocalId: 103
+      Name: Area
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: String
+      Direction: output
+      LocalId: 104
+      Name: Line
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: String
+      Direction: output
+      LocalId: 105
+      Name: Cell
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: StringArray
+      Direction: output
+      LocalId: 106
+      Name: Tag
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: DoubleArray
+      Direction: output
+      LocalId: 107
+      Name: Value
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: StringArray
+      Direction: output
+      LocalId: 108
+      Name: Quality
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    - ContractType: StringArray
+      Direction: output
+      LocalId: 109
+      Name: Timestamp
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeContractItem, inray.OPCRouter4.BasePlugIn
+    Name: Scope Inputs
+  LocalId: 100
+  PosX: 20
+  PosY: 120
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeInputTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- Groups:
+  - Items:
+    - Direction: input
+      LocalId: 211
+      Name: ENTERPRISE
+    - Direction: input
+      LocalId: 212
+      Name: SITE
+    - Direction: input
+      LocalId: 213
+      Name: AREA
+    - Direction: input
+      LocalId: 214
+      Name: LINE
+    - Direction: input
+      LocalId: 215
+      Name: CELL
+    - Direction: input
+      LocalId: 216
+      Name: TAG
+    Name: Variables
+    _clrType:
+    - inray.OPCRouter.BasePlugIn.Config.Calculator.TORechnerVariablesGroup, inray.OPCRouter4.BasePlugIn
+  - Items:
+    - Direction: output
+      LocalId: 221
+      Name: Ausgabewert
+    Name: Calculation result
+    _clrType:
+    - inray.OPCRouter.BasePlugIn.Config.Calculator.TORechnerResultGroup, inray.OPCRouter4.BasePlugIn
+  LocalId: 200
+  PlugIn: BasePlugInConfig
+  PosX: 340
+  PosY: 20
+  StringToParse: CONCATENATE("ENTERPRISE", "/", "SITE", "/", "AREA", "/", "LINE", "/", "CELL", "/", "TAG")
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.Calculator.TORechnerTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- FillArrayValuesSettingEnum: DuplicateDocuments
+  Groups:
+  - Items:
+    - LocalId: 305
+      Name: Json
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectDocItem, inray.OPCRouter4.BasePlugIn
+    Name: JsonPath Doc
+  - Name: JsonPath Parameters
+  - Items:
+    - Direction: input
+      LocalId: 311
+      Name: tag
+      Value: '$.tag'
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectNodeItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 312
+      Name: value
+      Value: '$.value'
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectNodeItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 313
+      Name: quality
+      Value: '$.quality'
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectNodeItem, inray.OPCRouter4.BasePlugIn
+    - Direction: input
+      LocalId: 314
+      Name: timestamp
+      Value: '$.timestamp'
+      _clrType:
+      - inray.OPCRouter.BasePlugIn.Config.JSON.JsonTransferObjectNodeItem, inray.OPCRouter4.BasePlugIn
+    Name: JsonPath Items
+  JsonDocument: '{"tag":"","value":0.0,"quality":"","timestamp":""}'
+  LocalId: 300
+  PlugIn: BasePlugInConfig
+  PosX: 340
+  PosY: 300
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.JSON.JsonWriteTransferObjectConfig, inray.OPCRouter4.BasePlugIn
+- ConfigType: 20001
+  DynamicTopic: true
+  Groups:
+  - Items:
+    - Direction: input
+      LocalId: 401
+      Name: Payload
+    - Direction: input
+      LocalId: 402
+      Name: Topic
+  - Name: Parameter
+    _clrType:
+    - inray.OPCRouter.MqttPlugIn.MqttParameterItemGroup, inray.OPCRouter4.MqttPlugIn
+  - Name: User properties
+    _clrType:
+    - inray.OPCRouter.MqttPlugIn.MqttUserPropertyItemGroup, inray.OPCRouter4.MqttPlugIn
+  LocalId: 400
+  PayloadType: String
+  PlugIn: 2609030005-100000001-E5F6A7B8-00000001
+  PlugInType: 20000
+  PosX: 1080
+  PosY: 160
+  PublishToTopic: true
+  QualityOfService: Default
+  Retain: ${uns_retain}
+  Topic: uns/unrouted
+  _clrType:
+  - inray.OPCRouter.MqttPlugIn.MqttTransferObjectConfig, inray.OPCRouter4.MqttPlugIn
+- Groups:
+  - Items: []
+    Name: Scope Return Values
+  LocalId: 500
+  PosX: 840
+  PosY: 420
+  _clrType:
+  - inray.OPCRouter.BasePlugIn.Config.ScopeCall.ScopeReturnTransferObjectConfig, inray.OPCRouter4.BasePlugIn
